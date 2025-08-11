@@ -15,7 +15,7 @@
           <h3
             class="w-full bg-primary pt-4 pb-6 text-3xl font-medium text-center text-white"
           >
-            {{ t("home_page.chairman_message") }}
+            {{ t("home.chairman_message") }}
           </h3>
         </div>
       </router-link>

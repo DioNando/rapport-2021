@@ -20,7 +20,11 @@
     "management_team": "Un management engagé, au service des orientations stratégiques",
     "reports_2021": "Rapports 2021"
   },
-  "home_page": {
+  "chairman_message": {
+    "title": "Othman Benjelloun",
+    "subtitle": "Président Directeur Général"
+  },
+  "home": {
     "chairman_message": "Mot du président"
   }
   

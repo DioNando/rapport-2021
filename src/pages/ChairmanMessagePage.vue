@@ -1,15 +1,18 @@
 <template>
-  <section class="p-24 flex items-start gap-6">
-    <div>
-      <div class="chairman-message overflow-hidden rounded-2xl shadow-xl">
+  <section class="relative px-48 flex items-start gap-12">
+    <img class="absolute right-48 top-0" src="/assets/images/backgrounds/bg_mp.webp" />
+    <div class="chairman-message">
+      <div class="overflow-hidden rounded-2xl shadow-xl">
         <img
           src="/assets/images/backgrounds/Mot-du-President-Othman-BENJELLOUN.webp"
           alt=""
         />
       </div>
-      <h3 class="text-3xl text-primary font-medium mt-4">Othman Benjelloun</h3>
+      <h3 class="text-3xl text-primary font-medium mt-4">
+        {{ t("chairman_message.title") }}
+      </h3>
       <p class="text-xl mt-3 text-wrap">
-        Chairman & Chief Executive Officer | Président Directeur Général
+        {{ t("chairman_message.subtitle") }}
       </p>
     </div>
     <article>
@@ -17,7 +20,7 @@
         {{ t("navigation.chairman_message") }}
       </h1>
       <!-- VERSION ANGLAIS -->
-      <div class="space-y-3">
+      <div v-if="currentLanguage === 'en'" class="space-y-6">
         <p>
           BANK OF AFRICA Group represents a Morocco which is resolutely
           committed to economic and social development. The Group has forged a
@@ -70,7 +73,7 @@
         </p>
       </div>
       <!-- VERSION FRANCAIS -->
-      <div class="space-y-3">
+      <div v-else-if="currentLanguage === 'fr'" class="space-y-3">
         <p>
           Représentatif d'un Maroc résolument engagé dans la voie de
           l'émergence, le Groupe BANK OF AFRICA se positionne comme un
@@ -129,11 +132,15 @@
 
 <script setup>
 import { useI18n } from "vue-i18n";
+import { useLanguage } from "@/composables/useLanguage";
+
+const { currentLanguage } = useLanguage();
 const { t } = useI18n();
 </script>
 
 <style lang="scss" scoped>
 .chairman-message {
+  flex: 1;
   // width: 400px;
   height: 100%;
   position: relative;
@@ -143,5 +150,9 @@ const { t } = useI18n();
     height: auto;
     object-fit: cover;
   }
+}
+
+article {
+  flex: 3;
 }
 </style>
