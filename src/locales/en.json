@@ -1,4 +1,26 @@
 {
   "welcome": "Welcome",
-  "goodbye": "Goodbye"
+  "goodbye": "Goodbye",
+  "common": {
+    "yes": "Yes",
+    "no": "No",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "readMore": "Read more"
+  },
+  "navigation": {
+    "home": "Home",
+    "chairman_message": "Chairman's message",
+    "value_model": "A model for creating and sharing value",
+    "sustainable_responsible": "Sustainable and responsible development",
+    "foundation_csr": "BMCE Bank Foundation, a pillar of Bank of Africa Group's CSR strategy",
+    "governance": "Sustainable development underpinning governance system",
+    "management_team": "A committed management team, successfully enacting Group strategy",
+    "reports_2021": "2021 reports"
+  },
+  "home_page": {
+    "chairman_message": "Chairman's message"
+  }
 }

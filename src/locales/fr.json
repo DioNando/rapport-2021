@@ -1,4 +1,27 @@
 {
   "welcome": "Bienvenue",
-  "goodbye": "Au revoir"
+  "goodbye": "Au revoir",
+  "common": {
+    "yes": "Oui",
+    "no": "Non",
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "readMore": "Lire la suite"
+  },
+  "navigation": {
+    "home": "Accueil",
+    "chairman_message": "Mot du président",
+    "value_model": "Un modèle de création et de partage de valeur",
+    "sustainable_responsible": "Un développement durable et responsable",
+    "foundation_csr": "La Fondation BMCE Bank, pilier de la stratégie RSE du Groupe Bank Of Africa",
+    "governance": "Une gouvernance soutenue par le développement durable",
+    "management_team": "Un management engagé, au service des orientations stratégiques",
+    "reports_2021": "Rapports 2021"
+  },
+  "home_page": {
+    "chairman_message": "Mot du président"
+  }
+  
 }

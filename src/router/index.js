@@ -8,6 +8,13 @@ import DefaultLayout from "@/layouts/DefaultLayout.vue";
 // Pages
 import HomePage from "@/pages/HomePage.vue";
 import NotFoundPage from "@/pages/NotFoundPage.vue";
+import Report2021Page from "@/pages/Report2021Page.vue";
+import ChairmanMessagePage from "@/pages/ChairmanMessagePage.vue";
+import ValueModelPage from "@/pages/ValueModelPage.vue";
+import SustainableResponsiblePage from "@/pages/SustainableResponsiblePage.vue";
+import FoundationCsrPage from "@/pages/FoundationCsrPage.vue";
+import GovernancePage from "@/pages/GovernancePage.vue";
+import ManagementTeamPage from "@/pages/ManagementTeamPage.vue";
 
 const routes = [
   {
@@ -29,6 +36,76 @@ const routes = [
           },
         },
       },
+      {
+        path: "/report-2021",
+        name: "Report-2021",
+        component: Report2021Page,
+        meta: {
+          title: {
+            fr: 'Rapport Annuel 2021 PDF - BOA',
+            en: 'Annual Report 2021 PDF - BOA'
+          },
+          description: {
+            fr: 'Téléchargez le rapport annuel 2021 en format PDF',
+            en: 'Download the 2021 annual report in PDF format'
+          }
+        }
+      }
+      ,
+      {
+        path: "/chairman-message",
+        name: "ChairmanMessage",
+        component: ChairmanMessagePage,
+        meta: {
+          title: { fr: "Mot du président - BOA", en: "Chairman's message - BOA" },
+          description: { fr: "Mot du président", en: "Chairman's message" }
+        }
+      },
+      {
+        path: "/value-model",
+        name: "ValueModel",
+        component: ValueModelPage,
+        meta: {
+          title: { fr: "Création et partage de valeur - BOA", en: "Creating and sharing value - BOA" },
+          description: { fr: "Un modèle de création et de partage de valeur", en: "A model for creating and sharing value" }
+        }
+      },
+      {
+        path: "/sustainable-responsible",
+        name: "SustainableResponsible",
+        component: SustainableResponsiblePage,
+        meta: {
+          title: { fr: "Développement durable et responsable - BOA", en: "Sustainable and responsible development - BOA" },
+          description: { fr: "Un développement durable et responsable", en: "Sustainable and responsible development" }
+        }
+      },
+      {
+        path: "/foundation-csr",
+        name: "FoundationCsr",
+        component: FoundationCsrPage,
+        meta: {
+          title: { fr: "Fondation BMCE Bank - BOA", en: "BMCE Bank Foundation - BOA" },
+          description: { fr: "La Fondation BMCE Bank, pilier de la stratégie RSE du Groupe Bank Of Africa", en: "BMCE Bank Foundation, a pillar of Bank of Africa Group's CSR strategy" }
+        }
+      },
+      {
+        path: "/governance",
+        name: "Governance",
+        component: GovernancePage,
+        meta: {
+          title: { fr: "Gouvernance - BOA", en: "Governance - BOA" },
+          description: { fr: "Une gouvernance soutenue par le développement durable", en: "Sustainable development underpinning governance system" }
+        }
+      },
+      {
+        path: "/management-team",
+        name: "ManagementTeam",
+        component: ManagementTeamPage,
+        meta: {
+          title: { fr: "Équipe dirigeante - BOA", en: "Management team - BOA" },
+          description: { fr: "Un management engagé, au service des orientations stratégiques", en: "A committed management team, successfully enacting Group strategy" }
+        }
+      }
     ],
   },
 //   {
