@@ -1,0 +1,24 @@
+{
+  "name": "rapport-2021",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.5.18",
+    "@tailwindcss/vite": "^4.1.11",
+    "aos": "^2.3.4",
+    "tailwindcss": "^4.1.11",
+    "vue-i18n": "^9.14.5",
+    "vue-router": "^4.5.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.1",
+    "sass": "^1.90.0",
+    "vite": "^7.1.0"
+  }
+}
