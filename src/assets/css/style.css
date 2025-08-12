@@ -6,3 +6,7 @@
   --color-accent: #00a5ae;
   --color-text: #707070;
 }
+
+.router-link-active {
+  color: var(--color-accent);
+}

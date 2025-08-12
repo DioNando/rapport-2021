@@ -21,6 +21,6 @@ const props = defineProps({
 const { t } = useI18n()
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 /* Inherit container spacing from parent */
 </style>
