@@ -3,7 +3,7 @@
     <div class="bg-header">
       <img src="/assets/images/backgrounds/bg_header.webp" />
     </div>
-    <nav class="flex items-center justify-between p-24">
+    <nav class="flex flex-col lg:flex-row items-center justify-between p-4 md:p-24">
       <router-link to="/" class="logo">
         <img
           src="/assets/images/logos/Logo-BOA.webp"

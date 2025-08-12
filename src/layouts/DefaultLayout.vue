@@ -31,6 +31,6 @@ import Footer from '@/components/layout/Footer.vue'
     /* max-width: 1200px; */
     margin: 0 auto;
     width: 100%;
-    min-height: 100vh;
+    /* min-height: 100vh; */
 }
 </style>

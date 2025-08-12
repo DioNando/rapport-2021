@@ -1,6 +1,6 @@
 <template>
-  <section class="relative px-48 flex items-start gap-12">
-    <img class="absolute right-48 top-0" src="/assets/images/backgrounds/bg_mp.webp" />
+  <section class="relative px-4 md:px-48 flex flex-col md:flex-row items-start gap-12">
+    <img class="absolute right-32 top-0 -z-1" src="/assets/images/backgrounds/bg_mp.webp" />
     <div class="chairman-message">
       <div class="overflow-hidden rounded-2xl shadow-xl">
         <img
@@ -15,7 +15,7 @@
         {{ t("chairman_message.subtitle") }}
       </p>
     </div>
-    <article>
+    <article class="text-xl">
       <h1 class="text-4xl text-primary font-bold uppercase mb-12">
         {{ t("navigation.chairman_message") }}
       </h1>
@@ -141,7 +141,7 @@ const { t } = useI18n();
 <style lang="scss" scoped>
 .chairman-message {
   flex: 1;
-  // width: 400px;
+  width: 100%;
   height: 100%;
   position: relative;
 

@@ -1,5 +1,5 @@
 <template>
-  <ul class="flex flex-col items-end gap-4 uppercase font-bold text-xl text-primary">
+  <ul class="flex flex-col items-end gap-4 uppercase font-bold text-xl text-primary text-right">
     <li v-for="item in items" :key="item.label" data-aos="fade-up" data-aos-delay="400">
       <router-link :to="item.path">{{ t(item.label) }}</router-link>
     </li>
