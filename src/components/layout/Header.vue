@@ -3,6 +3,29 @@
     <div class="bg-header">
       <img src="/assets/images/backgrounds/bg_header.webp" />
     </div>
+    <!-- Version 1 -->
+    <!-- <nav
+      class="bg-white flex flex-col lg:flex-row items-center justify-between p-4 md:px-24"
+    >
+      <router-link to="/" class="logo">
+        <img
+          src="/assets/images/logos/Logo-BOA.webp"
+          alt="Logo BOA"
+          class="logo-image"
+        />
+      </router-link>
+      <div class="flex items-center gap-4 mb-3">
+        <LanguageSelector />
+        <div class="menu-icon" @click="toggleDrawer">
+          <img
+            src="/assets/images/icons/icon_burger_menu.svg"
+            alt="Menu"
+            class="menu-icon cursor-pointer"
+          />
+        </div>
+      </div>
+    </nav> -->
+    <!-- Version 2 -->
     <nav
       class="flex flex-col lg:flex-row items-center justify-between p-4 md:p-24"
     >
@@ -13,75 +36,56 @@
           class="logo-image"
         />
       </router-link>
-      <!-- <div class="flex items-center gap-4">
-        <div class="menu flex flex-col items-end">
-          <div class="flex items-center gap-4 mb-3">
-            <LanguageSelector />
-            <div class="menu-icon">
-              <img
-                src="/assets/images/icons/icon_burger_menu.svg"
-                alt="Menu"
-                class="menu-icon"
-              />
-            </div>
-          </div>
-          <div class="menu-content">
-            <NavMenu :items="navItems" />
-          </div>
-        </div>
-      </div> -->
-      <div>
-        <div class="flex items-center gap-4 mb-3">
-          <LanguageSelector />
-          <div class="menu-icon" @click="toggleDrawer">
-            <img
-              src="/assets/images/icons/icon_burger_menu.svg"
-              alt="Menu"
-              class="menu-icon cursor-pointer"
-            />
-          </div>
-        </div>
-        <!-- Background overlay -->
-        <div v-if="isDrawerOpen" class="drawer-overlay" @click="closeDrawer"></div>
-        <div v-if="isDrawerOpen" class="menu-content bg-gray-100 shadow-2xl">
-          <div class="close-icon absolute top-6 right-6" @click="closeDrawer">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="32"
-              height="32"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="cursor-pointer"
-            >
-              <line x1="18" y1="6" x2="6" y2="18"></line>
-              <line x1="6" y1="6" x2="18" y2="18"></line>
-            </svg>
-          </div>
-          <NavMenu :items="navItems" @item-clicked="closeDrawer" />
+      <div class="flex items-center gap-4 mb-3">
+        <LanguageSelector />
+        <div class="menu-icon" @click="toggleDrawer">
+          <img
+            src="/assets/images/icons/icon_burger_menu.svg"
+            alt="Menu"
+            class="menu-icon cursor-pointer"
+          />
         </div>
       </div>
     </nav>
+    <!-- Background overlay -->
+    <div v-if="isDrawerOpen" class="drawer-overlay" @click="closeDrawer"></div>
+    <div v-if="isDrawerOpen" class="menu-content bg-gray-100 shadow-2xl">
+      <div class="close-icon absolute top-6 right-6" @click="closeDrawer">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="32"
+          height="32"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="cursor-pointer"
+        >
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </div>
+      <NavMenu :items="navItems" @item-clicked="closeDrawer" />
+    </div>
   </header>
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref } from "vue";
 import LanguageSelector from "@/components/ui/LanguageSelector.vue";
 import NavMenu from "@/components/ui/NavMenu.vue";
 
-const isDrawerOpen = ref(false)
+const isDrawerOpen = ref(false);
 
 const toggleDrawer = () => {
-  isDrawerOpen.value = !isDrawerOpen.value
-}
+  isDrawerOpen.value = !isDrawerOpen.value;
+};
 
 const closeDrawer = () => {
-  isDrawerOpen.value = false
-}
+  isDrawerOpen.value = false;
+};
 
 const navItems = [
   // { path: '/', label: 'navigation.home' },

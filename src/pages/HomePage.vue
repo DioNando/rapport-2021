@@ -81,7 +81,7 @@ const { t } = useI18n();
 
 <style lang="scss" scoped>
 .chairman-message {
-  width: 400px;
+  // width: 400px;
   height: 100%;
   position: relative;
 

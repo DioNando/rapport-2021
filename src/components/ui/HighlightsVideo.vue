@@ -128,7 +128,8 @@ watch(activeSrc, () => {
 <style scoped lang="scss">
 .highlights-video {
   position: relative;
-  flex: 1;
+  // flex: 1;
+  width: 100%;
   aspect-ratio: 16 / 9;
   border-radius: 12px;
   overflow: hidden;
