@@ -8,7 +8,7 @@
     "cancel": "Annuler",
     "delete": "Supprimer",
     "edit": "Modifier",
-    "readMore": "Lire la suite",
+    "read_more": "Lire la suite",
     "download": "Télécharger"
   },
   "navigation": {
@@ -24,6 +24,11 @@
   "chairman_message": {
     "title": "Othman Benjelloun",
     "subtitle": "Président Directeur Général"
+  },
+  "reports_2021": {
+    "main_title": "Rapports 2021",
+    "sustainable_title": "Rapports Développement Durable 2021",
+    "abridged_title": "Rapports Abrégés 2021 en six langues"
   },
   "home": {
     "chairman_message": "Mot du président"

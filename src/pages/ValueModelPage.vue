@@ -36,6 +36,7 @@
         </p>
       </div>
     </article>
+    <img :src="currentLanguage === 'en' ? '/assets/images/backgrounds/A-MODEL-FOR-CREATING-AND-SHARING-VALUE.png' : '/assets/images/backgrounds/Un-modele-de-creation-et-de-partage-de-valeur.webp'" alt="Value Model" class="mt-12" />
   </section>
 </template>
 

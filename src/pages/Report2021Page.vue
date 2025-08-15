@@ -1,8 +1,8 @@
 <template>
-  <section class="p-24">
+  <section class="px-4 md:px-24">
     <div class="mb-12">
       <h1 class="text-4xl text-primary font-bold uppercase mb-6">
-        2021 Reports | Rapports 2021
+        {{ t('reports_2021.main_title') }}
       </h1>
       <div>
         <ul>
@@ -53,8 +53,7 @@
     </div>
     <div class="mb-12">
       <h1 class="text-4xl text-primary font-bold uppercase mb-6">
-        Sustainable Development Reports 2021 | Rapports Développement Durable
-        2021
+        {{ t('reports_2021.sustainable_title') }}
       </h1>
       <div>
         <ul>
@@ -105,8 +104,7 @@
     </div>
     <div>
       <h1 class="text-4xl text-primary font-bold uppercase mb-6">
-        Abridged Reports 2021 in six languages | Rapports Abrégés 2021 en six
-        langues
+        {{ t('reports_2021.abridged_title') }}
       </h1>
       <div>
         <ul>

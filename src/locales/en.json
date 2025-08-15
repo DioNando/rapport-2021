@@ -8,7 +8,7 @@
     "cancel": "Cancel",
     "delete": "Delete",
     "edit": "Edit",
-    "readMore": "Read more",
+    "read_more": "Read more",
     "download": "Download"
   },
   "navigation": {
@@ -25,7 +25,12 @@
     "title": "Othman Benjelloun",
     "subtitle": "Chairman & Chief Executive Officer"
   },
-  "home_page": {
+  "reports_2021": {
+    "main_title": "2021 Reports",
+    "sustainable_title": "Sustainable Development Reports 2021",
+    "abridged_title": "Abridged Reports 2021 in six languages"
+  },
+  "home": {
     "chairman_message": "Chairman's message"
   }
 }
