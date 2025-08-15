@@ -33,16 +33,18 @@
       <div>
         <div class="flex items-center gap-4 mb-3">
           <LanguageSelector />
-          <div class="menu-icon">
+          <div class="menu-icon" @click="toggleDrawer">
             <img
               src="/assets/images/icons/icon_burger_menu.svg"
               alt="Menu"
-              class="menu-icon"
+              class="menu-icon cursor-pointer"
             />
           </div>
         </div>
-        <div class="menu-content bg-gray-100 shadow-2xl">
-          <div class="close-icon absolute top-6 right-6">
+        <!-- Background overlay -->
+        <div v-if="isDrawerOpen" class="drawer-overlay" @click="closeDrawer"></div>
+        <div v-if="isDrawerOpen" class="menu-content bg-gray-100 shadow-2xl">
+          <div class="close-icon absolute top-6 right-6" @click="closeDrawer">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="32"
@@ -59,7 +61,7 @@
               <line x1="6" y1="6" x2="18" y2="18"></line>
             </svg>
           </div>
-          <NavMenu :items="navItems" />
+          <NavMenu :items="navItems" @item-clicked="closeDrawer" />
         </div>
       </div>
     </nav>
@@ -67,8 +69,19 @@
 </template>
 
 <script setup>
+import { ref } from 'vue'
 import LanguageSelector from "@/components/ui/LanguageSelector.vue";
 import NavMenu from "@/components/ui/NavMenu.vue";
+
+const isDrawerOpen = ref(false)
+
+const toggleDrawer = () => {
+  isDrawerOpen.value = !isDrawerOpen.value
+}
+
+const closeDrawer = () => {
+  isDrawerOpen.value = false
+}
 
 const navItems = [
   // { path: '/', label: 'navigation.home' },
@@ -107,6 +120,16 @@ header {
   &-icon {
     width: 3.5rem;
   }
+}
+
+.drawer-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
 }
 
 .menu-content {

@@ -3,7 +3,7 @@
     class="flex flex-col items-center gap-6 uppercase font-bold text-xl text-primary text-center"
   >
     <li v-for="item in items" :key="item.label">
-      <router-link :to="item.path">{{ t(item.label) }}</router-link>
+      <router-link :to="item.path" @click="$emit('item-clicked')">{{ t(item.label) }}</router-link>
     </li>
     <li>
       <LanguageSelector />
@@ -22,6 +22,8 @@ const props = defineProps({
     // Expected shape: [{ path: string, label: string }]
   },
 });
+
+const emit = defineEmits(['item-clicked'])
 
 const { t } = useI18n();
 </script>
