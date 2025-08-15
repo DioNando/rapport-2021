@@ -9,6 +9,7 @@
       :title="lang.name"
     >
       <img :src="lang.flag" :alt="lang.name" class="flag-img" />
+      <span>{{ lang.name }}</span>
     </button>
   </div>
 </template>
@@ -36,6 +37,9 @@ const { currentLanguage, availableLanguages, changeLanguage } = useLanguage()
   justify-content: center;
   min-width: 44px;
   min-height: 44px;
+  gap: 0.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 .flag-img {
@@ -47,11 +51,11 @@ const { currentLanguage, availableLanguages, changeLanguage } = useLanguage()
 
 .lang-btn:hover {
   /* background: #1369b4; */
-  color: white;
+  /* color: white; */
 }
 
 .lang-btn.active {
   /* background: #1369b4; */
-  color: white;
+  /* color: white; */
 }
 </style>
