@@ -67,10 +67,10 @@
     </div>
   </section>
   <section class="kpis-section px-24">
-    <div class="kpis-1 flex items-start justify-around gap-12 py-24 font-bold text-gray-500 text-center">
-      <div
-        class="flex flex-col gap-4 items-center"
-      >
+    <div
+      class="kpis-1 flex items-start justify-around gap-12 py-24 font-bold text-gray-500 text-center"
+    >
+      <div class="flex flex-col gap-4 items-center">
         <img
           :src="
             currentLanguage === 'en'
@@ -80,12 +80,10 @@
           alt=""
         />
         <p>
-          {{ t('kpis.first_kpi') }}
+          {{ t("kpis.first_kpi") }}
         </p>
       </div>
-      <div
-        class="flex flex-col gap-4 items-center"
-      >
+      <div class="flex flex-col gap-4 items-center">
         <img
           :src="
             currentLanguage === 'en'
@@ -95,12 +93,10 @@
           alt=""
         />
         <p>
-          {{ t('kpis.second_kpi') }}
+          {{ t("kpis.second_kpi") }}
         </p>
       </div>
-      <div
-        class="flex flex-col gap-4 items-center"
-      >
+      <div class="flex flex-col gap-4 items-center">
         <img
           :src="
             currentLanguage === 'en'
@@ -110,25 +106,62 @@
           alt=""
         />
         <p>
-          {{ t('kpis.third_kpi') }}
+          {{ t("kpis.third_kpi") }}
         </p>
       </div>
     </div>
     <div class="kpis-2">
       <!-- 10 elements -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 p-12">
-        <div 
-          v-for="item in tenElements" 
-          :key="item.id" 
+        <div
+          v-for="item in kpisElements"
+          :key="item.id"
           class="flex flex-col items-center text-center space-y-4"
         >
           <img :src="item.src" :alt="item.title" class="object-contain" />
           <h4 class="text-5xl font-bold text-secondary">{{ item.title }}</h4>
           <p class="text-2xl font-bold text-secondary">
-            {{ currentLanguage === 'en' ? item.subtitleEn : item.subtitleFr }}
+            {{ currentLanguage === "en" ? item.subtitleEn : item.subtitleFr }}
           </p>
         </div>
       </div>
+    </div>
+  </section>
+  <section class="p-4 md:p-32 relative">
+    <img class="absolute top-2 left-2 -z-10" src="/assets/images/backgrounds/Plan-de-travail-–-6.webp" alt="">
+    <!-- v-for de 4 cards -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div
+        v-for="card in cardsData"
+        :key="card.id"
+        class="bg-primary rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl hover:scale-105 transition-all duration-300"
+      >
+        <img
+          :src="card.src"
+          :alt="card.titleEn"
+          class="w-full h-64 object-cover"
+        />
+        <div class="p-6 flex flex-col">
+          <h3 class="text-xl font-bold text-white mb-4">
+            {{ currentLanguage === "en" ? card.titleEn : card.titleFr }}
+          </h3>
+          <router-link
+            :to="card.url"
+            class="self-end inline-block py-2 px-4 text-sm rounded-lg text-white bg-accent hover:bg-secondary cursor-pointer transition-all"
+          >
+            {{ t("common.read_more") }}
+          </router-link>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="text-center">
+    <h3 class="text-3xl text-primary font-medium mt-4">
+      {{ t("home.commitments_distinctions") }}
+    </h3>
+    <div class="mt-8">
+      <!-- Carousel components -->
+      <LogoCarousel />
     </div>
   </section>
 </template>
@@ -141,80 +174,114 @@ import { ref } from "vue";
 const { currentLanguage } = useLanguage();
 
 import HighlightsVideo from "@/components/ui/HighlightsVideo.vue";
+import LogoCarousel from "@/components/ui/LogoCarousel.vue";
 
 const { t } = useI18n();
 
-const tenElements = ref([
+const kpisElements = ref([
   {
     id: 1,
     src: "/assets/images/backgrounds/Icons-1.svg",
     title: "32",
     subtitleEn: "Countries",
-    subtitleFr: "Pays"
+    subtitleFr: "Pays",
   },
   {
     id: 2,
     src: "/assets/images/backgrounds/Icons-2.svg",
     title: "6.6M",
     subtitleEn: "Customers",
-    subtitleFr: "Clients"
+    subtitleFr: "Clients",
   },
   {
     id: 3,
     src: "/assets/images/backgrounds/Icons-3.svg",
     title: "14 900",
     subtitleEn: "Employers",
-    subtitleFr: "Collaborateurs"
+    subtitleFr: "Collaborateurs",
   },
   {
     id: 4,
     src: "/assets/images/backgrounds/Icons-4.svg",
     title: "345MMDH",
     subtitleEn: "Total assets",
-    subtitleFr: "Total bilan"
+    subtitleFr: "Total bilan",
   },
   {
     id: 5,
     src: "/assets/images/backgrounds/Icons-5.svg",
     title: "2 000",
     subtitleEn: "Points of sale",
-    subtitleFr: "Points de vente"
+    subtitleFr: "Points de vente",
   },
   {
     id: 6,
     src: "/assets/images/backgrounds/Icons-–-3.svg",
     title: "4.11",
     subtitleEn: "CO2 footprint per employee",
-    subtitleFr: "Empreinte CO2 par employé"
+    subtitleFr: "Empreinte CO2 par employé",
   },
   {
     id: 7,
     src: "/assets/images/backgrounds/Icons-–-4.svg",
     title: "42%",
     subtitleEn: "Gender parity -women/men- in 2021 -vs. 40% in 2020",
-    subtitleFr: "Pourcentage des femmes dans la banque"
+    subtitleFr: "Pourcentage des femmes dans la banque",
   },
   {
     id: 8,
     src: "/assets/images/backgrounds/Icons.svg",
     title: "3.2",
     subtitleEn: "Billion dirhams Credits for the environment",
-    subtitleFr: "Milliards DH Crédits en faveur de l'environnement"
+    subtitleFr: "Milliards DH Crédits en faveur de l'environnement",
   },
   {
     id: 9,
     src: "/assets/images/backgrounds/Icons-–-5.svg",
     title: "47%",
     subtitleEn: "Of staff benefiting from training vs. 39% in 2020",
-    subtitleFr: "Effectif bénéficiant d'une formation vs. 39% en 2020"
+    subtitleFr: "Effectif bénéficiant d'une formation vs. 39% en 2020",
   },
   {
     id: 10,
     src: "/assets/images/backgrounds/Icons-–-6.svg",
     title: "6 115",
     subtitleEn: "Days / men of training Vs. 2,392 in 2020",
-    subtitleFr: "Jours / hommes de formation Vs. 2 392 en 2020"
-  }
+    subtitleFr: "Jours / hommes de formation Vs. 2 392 en 2020",
+  },
+]);
+
+const cardsData = ref([
+  {
+    id: 1,
+    src: "/assets/images/backgrounds/bg_header_page.webp",
+    titleEn: "Sustainable and responsible development",
+    titleFr: "Un développement durable et responsable",
+    url: "/sustainable-responsible",
+  },
+  {
+    id: 2,
+    src: "/assets/images/backgrounds/bg_header_Fondation_BMCE.webp",
+    titleEn: "BMCE Bank foundation, a pillar of Bank of Africa's CSR strategy",
+    titleFr:
+      "La fondation BMCE Bank, pilier de la stratégie RSE de Bank of Africa",
+    url: "/foundation-csr",
+  },
+  {
+    id: 3,
+    src: "/assets/images/backgrounds/bg_header_gouvernance.webp",
+    titleEn: "Sustainable development underpinning governance system",
+    titleFr: "Une gouvernance soutenue par le développement durable",
+    url: "/governance",
+  },
+  {
+    id: 4,
+    src: "/assets/images/backgrounds/bg_header_page_management.webp",
+    titleEn:
+      "A committed management team, successfully enacting group strategy",
+    titleFr: "Un management engagé au service des orientations stratégiques",
+    url: "/management-team",
+  },
 ]);
 </script>
 
