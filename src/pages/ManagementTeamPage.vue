@@ -108,6 +108,12 @@
       </div>
     </div>
   </section>
+  <section class="slides-container">
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus in
+    mollitia libero molestiae delectus ad quia labore blanditiis doloribus
+    veniam temporibus, sequi at consequatur quasi aliquam assumenda quaerat
+    nesciunt eligendi!
+  </section>
 </template>
 
 <script setup>
@@ -126,5 +132,12 @@ const { t } = useI18n();
     height: 100%;
     width: 100%;
   }
+}
+
+.slides-container {
+  height: 100vh;
+  background: url("/assets/images/backgrounds/slide_bg.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 </style>

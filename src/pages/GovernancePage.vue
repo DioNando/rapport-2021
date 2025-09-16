@@ -46,11 +46,16 @@
       </div>
     </div>
   </section>
+  <section class="slides-container p-4 py-24">
+    <!-- Caroussel -->
+    <GovernanceCarousel />
+  </section>
 </template>
 
 <script setup>
 import { useI18n } from "vue-i18n";
 import { useLanguage } from "@/composables/useLanguage";
+import GovernanceCarousel from "@/components/ui/GovernanceCarousel.vue";
 
 const { currentLanguage } = useLanguage();
 const { t } = useI18n();
@@ -64,5 +69,12 @@ const { t } = useI18n();
     height: 100%;
     width: 100%;
   }
+}
+
+.slides-container {
+  // height: 100vh;
+  background: url("/assets/images/backgrounds/slide_bg.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 </style>

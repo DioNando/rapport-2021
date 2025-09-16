@@ -128,7 +128,11 @@
     </div>
   </section>
   <section class="p-4 md:p-32 relative">
-    <img class="absolute top-2 left-2 -z-10" src="/assets/images/backgrounds/Plan-de-travail-–-6.webp" alt="">
+    <img
+      class="absolute top-2 left-2 -z-10"
+      src="/assets/images/backgrounds/Plan-de-travail-–-6.webp"
+      alt=""
+    />
     <!-- v-for de 4 cards -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
       <div
@@ -154,6 +158,12 @@
         </div>
       </div>
     </div>
+  </section>
+  <section class="slides-container">
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus in
+    mollitia libero molestiae delectus ad quia labore blanditiis doloribus
+    veniam temporibus, sequi at consequatur quasi aliquam assumenda quaerat
+    nesciunt eligendi!
   </section>
   <section class="text-center">
     <h3 class="text-4xl text-primary font-semibold mt-4">
@@ -318,5 +328,12 @@ const cardsData = ref([
     height: 6rem;
     aspect-ratio: 1/1;
   }
+}
+
+.slides-container {
+  // height: 100vh;
+  background: url("/assets/images/backgrounds/slide_bg.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 </style>
