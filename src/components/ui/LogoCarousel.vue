@@ -1,42 +1,54 @@
 <template>
-  <div class="carousel-container overflow-hidden py-8">
-    <div class="carousel-track" :style="{ transform: `translateX(-${currentOffset}px)` }">
-      <div 
-        v-for="logo in logos" 
-        :key="logo.id" 
-        class="carousel-item flex-shrink-0 px-4"
-      >
+  <div class="logo-carousel pt-8">
+    <swiper
+      :modules="modules"
+      :slides-per-view="10"
+      :space-between="30"
+      :loop="true"
+      :autoplay="{
+        delay: 2000,
+        disableOnInteraction: false,
+      }"
+      :navigation="false"
+      :breakpoints="{
+        320: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 4,
+          spaceBetween: 25,
+        },
+        1024: {
+          slidesPerView: 6,
+          spaceBetween: 30,
+        },
+      }"
+      class="logo-swiper"
+    >
+      <swiper-slide v-for="logo in logos" :key="logo.id" class="flex justify-center items-center">
         <img 
           :src="logo.src" 
           :alt="logo.alt" 
-          class="h-16 w-auto object-contain"
+          class="h-24 w-auto object-contain cursor-grabbing"
         />
-      </div>
-    </div>
-    <!-- Navigation dots -->
-    <div class="flex justify-center mt-6 space-x-2">
-      <button
-        v-for="(dot, index) in Math.ceil(logos.length / itemsPerView)"
-        :key="index"
-        @click="goToSlide(index)"
-        :class="[
-          'w-3 h-3 rounded-full transition-all duration-300',
-          currentSlide === index ? 'bg-primary' : 'bg-gray-300'
-        ]"
-      ></button>
-    </div>
+      </swiper-slide>
+    </swiper>
   </div>
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue';
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 
-const currentSlide = ref(0);
-const currentOffset = ref(0);
-const itemsPerView = ref(6); // Number of logos visible at once
-const itemWidth = ref(200); // Width of each logo item including padding
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
-const logos = ref([
+const modules = [Navigation, Pagination, Autoplay];
+
+const logos = [
   { id: 1, src: '/assets/images/logos/africa_investments.png', alt: 'Africa Investments' },
   { id: 2, src: '/assets/images/logos/arabia_corporate_social.png', alt: 'Arabia Corporate Social' },
   { id: 3, src: '/assets/images/logos/bureau_veritas.png', alt: 'Bureau Veritas' },
@@ -56,60 +68,37 @@ const logos = ref([
   { id: 17, src: '/assets/images/logos/unep_FI_principles.png', alt: 'UNEP FI Principles' },
   { id: 18, src: '/assets/images/logos/unep_finance_initiative.png', alt: 'UNEP Finance Initiative' },
   { id: 19, src: '/assets/images/logos/ve.png', alt: 'VE' },
-  { id: 20, src: '/assets/images/logos/we4she.png', alt: 'We4She' },
+  { id: 20, src: '/assets/images/logos/we4she.png', alt: 'WEP' },
   { id: 21, src: '/assets/images/logos/wep_1.png', alt: 'WEP 1' },
   { id: 22, src: '/assets/images/logos/wep.png', alt: 'WEP' }
-]);
-
-let autoplayInterval = null;
-
-const goToSlide = (slideIndex) => {
-  currentSlide.value = slideIndex;
-  currentOffset.value = slideIndex * itemWidth.value * itemsPerView.value;
-};
-
-const nextSlide = () => {
-  const maxSlides = Math.ceil(logos.value.length / itemsPerView.value);
-  currentSlide.value = (currentSlide.value + 1) % maxSlides;
-  goToSlide(currentSlide.value);
-};
-
-const startAutoplay = () => {
-  autoplayInterval = setInterval(nextSlide, 3000); // Change slide every 3 seconds
-};
-
-const stopAutoplay = () => {
-  if (autoplayInterval) {
-    clearInterval(autoplayInterval);
-  }
-};
-
-onMounted(() => {
-  startAutoplay();
-});
-
-onUnmounted(() => {
-  stopAutoplay();
-});
+];
 </script>
 
 <style lang="scss" scoped>
-.carousel-container {
-  .carousel-track {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-  }
-
-  .carousel-item {
-    min-width: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  &:hover {
-    .carousel-track {
-      animation-play-state: paused;
+.logo-carousel {
+  .logo-swiper {
+    padding-bottom: 40px;
+    
+    :deep(.swiper-pagination) {
+      bottom: 0;
+      
+      .swiper-pagination-bullet {
+        background-color: #cbd5e1;
+        opacity: 1;
+        
+        &.swiper-pagination-bullet-active {
+          background-color: var(--color-primary, #1e40af);
+        }
+      }
+    }
+    
+    :deep(.swiper-button-next),
+    :deep(.swiper-button-prev) {
+      color: var(--color-primary, #1e40af);
+      
+      &:after {
+        font-size: 20px;
+      }
     }
   }
 }

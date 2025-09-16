@@ -156,10 +156,10 @@
     </div>
   </section>
   <section class="text-center">
-    <h3 class="text-3xl text-primary font-medium mt-4">
+    <h3 class="text-4xl text-primary font-semibold mt-4">
       {{ t("home.commitments_distinctions") }}
     </h3>
-    <div class="mt-8">
+    <div class="px-24 mt-4">
       <!-- Carousel components -->
       <LogoCarousel />
     </div>
