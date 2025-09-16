@@ -30,7 +30,7 @@
         <img 
           :src="logo.src" 
           :alt="logo.alt" 
-          class="h-24 w-auto object-contain cursor-grabbing"
+          class="h-24 w-auto object-contain cursor-grab"
         />
       </swiper-slide>
     </swiper>

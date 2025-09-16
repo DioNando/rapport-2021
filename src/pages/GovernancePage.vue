@@ -47,7 +47,6 @@
     </div>
   </section>
   <section class="slides-container p-4 py-24">
-    <!-- Caroussel -->
     <GovernanceCarousel />
   </section>
 </template>
