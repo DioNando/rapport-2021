@@ -30,6 +30,11 @@
     "sustainable_title": "Rapports Développement Durable 2021",
     "abridged_title": "Rapports Abrégés 2021 en six langues"
   },
+  "kpis": {
+    "first_kpi": "Banque marocaine à s'implanter en Afrique subsaharienne en 1989",
+    "second_kpi": "Groupe panafricain par son rayonnement géographique : 20 pays et 5 zones économiques",
+    "third_kpi": "Banque au Maroc en termes de parts de marché Crédits et Dépôts"
+  },
   "home": {
     "chairman_message": "Mot du président"
   }

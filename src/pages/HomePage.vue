@@ -66,17 +66,156 @@
       </div>
     </div>
   </section>
+  <section class="kpis-section px-24">
+    <div class="kpis-1 flex items-start justify-around gap-12 py-24 font-bold text-gray-500 text-center">
+      <div
+        class="flex flex-col gap-4 items-center"
+      >
+        <img
+          :src="
+            currentLanguage === 'en'
+              ? '/assets/images/backgrounds/1st.png'
+              : '/assets/images/backgrounds/1er.png'
+          "
+          alt=""
+        />
+        <p>
+          {{ t('kpis.first_kpi') }}
+        </p>
+      </div>
+      <div
+        class="flex flex-col gap-4 items-center"
+      >
+        <img
+          :src="
+            currentLanguage === 'en'
+              ? '/assets/images/backgrounds/2nd.png'
+              : '/assets/images/backgrounds/2e.png'
+          "
+          alt=""
+        />
+        <p>
+          {{ t('kpis.second_kpi') }}
+        </p>
+      </div>
+      <div
+        class="flex flex-col gap-4 items-center"
+      >
+        <img
+          :src="
+            currentLanguage === 'en'
+              ? '/assets/images/backgrounds/3rd.png'
+              : '/assets/images/backgrounds/3e.png'
+          "
+          alt=""
+        />
+        <p>
+          {{ t('kpis.third_kpi') }}
+        </p>
+      </div>
+    </div>
+    <div class="kpis-2">
+      <!-- 10 elements -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 p-12">
+        <div 
+          v-for="item in tenElements" 
+          :key="item.id" 
+          class="flex flex-col items-center text-center space-y-4"
+        >
+          <img :src="item.src" :alt="item.title" class="object-contain" />
+          <h4 class="text-5xl font-bold text-secondary">{{ item.title }}</h4>
+          <p class="text-2xl font-bold text-secondary">
+            {{ currentLanguage === 'en' ? item.subtitleEn : item.subtitleFr }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 </template>
 
 <script setup>
 import { useI18n } from "vue-i18n";
 import { useLanguage } from "@/composables/useLanguage";
+import { ref } from "vue";
 
 const { currentLanguage } = useLanguage();
 
 import HighlightsVideo from "@/components/ui/HighlightsVideo.vue";
 
 const { t } = useI18n();
+
+const tenElements = ref([
+  {
+    id: 1,
+    src: "/assets/images/backgrounds/Icons-1.svg",
+    title: "32",
+    subtitleEn: "Countries",
+    subtitleFr: "Pays"
+  },
+  {
+    id: 2,
+    src: "/assets/images/backgrounds/Icons-2.svg",
+    title: "6.6M",
+    subtitleEn: "Customers",
+    subtitleFr: "Clients"
+  },
+  {
+    id: 3,
+    src: "/assets/images/backgrounds/Icons-3.svg",
+    title: "14 900",
+    subtitleEn: "Employers",
+    subtitleFr: "Collaborateurs"
+  },
+  {
+    id: 4,
+    src: "/assets/images/backgrounds/Icons-4.svg",
+    title: "345MMDH",
+    subtitleEn: "Total assets",
+    subtitleFr: "Total bilan"
+  },
+  {
+    id: 5,
+    src: "/assets/images/backgrounds/Icons-5.svg",
+    title: "2 000",
+    subtitleEn: "Points of sale",
+    subtitleFr: "Points de vente"
+  },
+  {
+    id: 6,
+    src: "/assets/images/backgrounds/Icons-–-3.svg",
+    title: "4.11",
+    subtitleEn: "CO2 footprint per employee",
+    subtitleFr: "Empreinte CO2 par employé"
+  },
+  {
+    id: 7,
+    src: "/assets/images/backgrounds/Icons-–-4.svg",
+    title: "42%",
+    subtitleEn: "Gender parity -women/men- in 2021 -vs. 40% in 2020",
+    subtitleFr: "Pourcentage des femmes dans la banque"
+  },
+  {
+    id: 8,
+    src: "/assets/images/backgrounds/Icons.svg",
+    title: "3.2",
+    subtitleEn: "Billion dirhams Credits for the environment",
+    subtitleFr: "Milliards DH Crédits en faveur de l'environnement"
+  },
+  {
+    id: 9,
+    src: "/assets/images/backgrounds/Icons-–-5.svg",
+    title: "47%",
+    subtitleEn: "Of staff benefiting from training vs. 39% in 2020",
+    subtitleFr: "Effectif bénéficiant d'une formation vs. 39% en 2020"
+  },
+  {
+    id: 10,
+    src: "/assets/images/backgrounds/Icons-–-6.svg",
+    title: "6 115",
+    subtitleEn: "Days / men of training Vs. 2,392 in 2020",
+    subtitleFr: "Jours / hommes de formation Vs. 2 392 en 2020"
+  }
+]);
 </script>
 
 <style lang="scss" scoped>
@@ -94,6 +233,23 @@ const { t } = useI18n();
   h3 {
     position: absolute;
     bottom: 0;
+  }
+}
+
+.kpis-section {
+  // height: 100vh;
+  background: url("/assets/images/backgrounds/Plan-de-travail-–-1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .kpis-1 img {
+    height: 5rem;
+    aspect-ratio: 1/1;
+  }
+
+  .kpis-2 img {
+    height: 6rem;
+    aspect-ratio: 1/1;
   }
 }
 </style>

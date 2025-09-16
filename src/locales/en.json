@@ -30,6 +30,11 @@
     "sustainable_title": "Sustainable Development Reports 2021",
     "abridged_title": "Abridged Reports 2021 in six languages"
   },
+  "kpis": {
+    "first_kpi": "Moroccan bank to establish operations in sub-Saharan Africa in 1989",
+    "second_kpi": "Pan-African group by geographical coverage : 20 countries and 5 economic zones",
+    "third_kpi": "Notable African subsidiaries: BOA Group, Banque de Développement du Mali et LCB Bank"
+  },
   "home": {
     "chairman_message": "Chairman's message"
   }

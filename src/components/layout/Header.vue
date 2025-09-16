@@ -27,7 +27,7 @@
     </nav> -->
     <!-- Version 2 -->
     <nav
-      class="flex flex-col lg:flex-row items-center justify-between p-4 md:p-24"
+      class="flex flex-col flex-nowrap lg:flex-row items-center justify-between p-4 md:p-24"
     >
       <router-link to="/" class="logo">
         <img
