@@ -28,14 +28,14 @@
             </h3>
             <!-- DEBUT -->
             <div
-              class="flex justify-around items-center pt-3 pb-8 font-bold text-center"
+              class="flex justify-evenly items-center pt-3 pb-8 font-bold text-center"
             >
-              <div class="flex flex-col gap-2">
-                <h5 class="text-secondary text-3xl">
-                  <span v-if="currentLanguage === 'en'">Chairmanship</span>
+              <div class="flex-1 flex flex-col gap-2">
+                <h5 class="text-secondary text-2xl">
+                  <span v-if="currentLanguage === 'en'">Chair</span>
                   <span v-else-if="currentLanguage === 'fr'">Présidence</span>
                 </h5>
-                <h6 class="text-accent text-3xl">
+                <h6 class="text-accent text-2xl">
                   <span v-if="currentLanguage === 'en'"
                     >Chairman & Executive Officer</span
                   >
@@ -44,21 +44,21 @@
                   >
                 </h6>
               </div>
-              <div class="flex flex-col gap-2">
+              <div class="flex-1 flex flex-col gap-2">
                 <div class="text-7xl text-accent">6</div>
-                <h5 class="text-secondary text-3xl">
+                <h5 class="text-secondary text-2xl">
                   <span v-if="currentLanguage === 'en'">Members</span
                   ><span v-else-if="currentLanguage === 'fr'">Membres</span>
                 </h5>
               </div>
-              <div class="flex flex-col gap-2">
-                <h5 class="text-secondary text-3xl">
+              <div class="flex-1 flex flex-col gap-2">
+                <h5 class="text-secondary text-2xl">
                   <span v-if="currentLanguage === 'en'">Meeting Frequency</span
                   ><span v-else-if="currentLanguage === 'fr'"
                     >Fréquence de réunions</span
                   >
                 </h5>
-                <h6 class="text-accent text-3xl">
+                <h6 class="text-accent text-2xl">
                   <span v-if="currentLanguage === 'en'">Monthly</span
                   ><span v-else-if="currentLanguage === 'fr'">Mensuelle</span>
                 </h6>
@@ -119,39 +119,43 @@
             </h3>
             <!-- DEBUT -->
             <div
-              class="flex justify-around items-center pt-3 pb-8 font-bold text-center"
+              class="flex justify-evenly items-center pt-3 pb-8 font-bold text-center"
             >
-              <div class="flex flex-col gap-2">
-                <h5 class="text-secondary text-3xl">
-                  <span v-if="currentLanguage === 'en'">Chairmanship</span>
+              <div class="flex-1 flex flex-col gap-2">
+                <h5 class="text-secondary text-2xl">
+                  <span v-if="currentLanguage === 'en'">Chair</span>
                   <span v-else-if="currentLanguage === 'fr'">Présidence</span>
                 </h5>
-                <h6 class="text-accent text-3xl">
+                <h6 class="text-accent text-2xl">
                   <span v-if="currentLanguage === 'en'"
-                    >Chairman & Executive Officer</span
+                    >Meeting chaired by one of the 3 Executive General
+                    Managers</span
                   >
                   <span v-else-if="currentLanguage === 'fr'"
-                    >Président Directeur Général</span
+                    >Désignation parmi les 3 Directions Générales Exécutives du
+                    Président de la séance</span
                   >
                 </h6>
               </div>
-              <div class="flex flex-col gap-2">
-                <div class="text-7xl text-accent">6</div>
-                <h5 class="text-secondary text-3xl">
+              <div class="flex-1 flex flex-col gap-2">
+                <div class="text-7xl text-accent">3</div>
+                <h5 class="text-secondary text-2xl">
                   <span v-if="currentLanguage === 'en'">Members</span
                   ><span v-else-if="currentLanguage === 'fr'">Membres</span>
                 </h5>
               </div>
-              <div class="flex flex-col gap-2">
-                <h5 class="text-secondary text-3xl">
+              <div class="flex-1 flex flex-col gap-2">
+                <h5 class="text-secondary text-2xl">
                   <span v-if="currentLanguage === 'en'">Meeting Frequency</span
                   ><span v-else-if="currentLanguage === 'fr'"
                     >Fréquence de réunions</span
                   >
                 </h5>
-                <h6 class="text-accent text-3xl">
-                  <span v-if="currentLanguage === 'en'">Monthly</span
-                  ><span v-else-if="currentLanguage === 'fr'">Mensuelle</span>
+                <h6 class="text-accent text-2xl">
+                  <span v-if="currentLanguage === 'en'">Once a fortnight</span
+                  ><span v-else-if="currentLanguage === 'fr'"
+                    >Une fois toutes les deux semaines</span
+                  >
                 </h6>
               </div>
             </div>
@@ -219,6 +223,49 @@
                 >COMITÉ EXÉCUTIF MAROC & INTERNATIONAL</span
               >
             </h3>
+            <!-- DEBUT -->
+            <div
+              class="flex justify-evenly items-center pt-3 pb-8 font-bold text-center"
+            >
+              <div class="flex-1 flex flex-col gap-2">
+                <h5 class="text-secondary text-2xl">
+                  <span v-if="currentLanguage === 'en'">Chair</span>
+                  <span v-else-if="currentLanguage === 'fr'">Présidence</span>
+                </h5>
+                <h6 class="text-accent text-2xl">
+                  <span v-if="currentLanguage === 'en'"
+                    >Meetings chaired alternatively by one of the 3 Executive
+                    General Managers</span
+                  >
+                  <span v-else-if="currentLanguage === 'fr'"
+                    >Alternativement tous les 3 mois parmi les 2 Directeurs
+                    Généraux Exécutifs</span
+                  >
+                </h6>
+              </div>
+              <div class="flex-1 flex flex-col gap-2">
+                <div class="text-7xl text-accent">6</div>
+                <h5 class="text-secondary text-2xl">
+                  <span v-if="currentLanguage === 'en'">Members</span
+                  ><span v-else-if="currentLanguage === 'fr'">Membres</span>
+                </h5>
+              </div>
+              <div class="flex-1 flex flex-col gap-2">
+                <h5 class="text-secondary text-2xl">
+                  <span v-if="currentLanguage === 'en'">Meeting Frequency</span
+                  ><span v-else-if="currentLanguage === 'fr'"
+                    >Fréquence de réunions</span
+                  >
+                </h5>
+                <h6 class="text-accent text-2xl">
+                  <span v-if="currentLanguage === 'en'">Weekly</span
+                  ><span v-else-if="currentLanguage === 'fr'"
+                    >Hebdomadaire</span
+                  >
+                </h6>
+              </div>
+            </div>
+            <!-- FIN -->
             <div class="space-y-4 text-gray-700 mb-6">
               <p
                 v-if="currentLanguage === 'en'"
@@ -283,6 +330,47 @@
                 >Comité de coordination du contrôle interne groupe</span
               >
             </h3>
+            <!-- DEBUT -->
+            <div
+              class="flex justify-evenly items-center pt-3 pb-8 font-bold text-center"
+            >
+              <div class="flex-1 flex flex-col gap-2">
+                <h5 class="text-secondary text-2xl">
+                  <span v-if="currentLanguage === 'en'">Chair</span>
+                  <span v-else-if="currentLanguage === 'fr'">Présidence</span>
+                </h5>
+                <h6 class="text-accent text-2xl">
+                  <span v-if="currentLanguage === 'en'"
+                    >Director and General Manager</span
+                  >
+                  <span v-else-if="currentLanguage === 'fr'"
+                    >L'Administrateur Directeur Général Délégué</span
+                  >
+                </h6>
+              </div>
+              <div class="flex-1 flex flex-col gap-2">
+                <div class="text-7xl text-accent">7</div>
+                <h5 class="text-secondary text-2xl">
+                  <span v-if="currentLanguage === 'en'">Members</span
+                  ><span v-else-if="currentLanguage === 'fr'">Membres</span>
+                </h5>
+              </div>
+              <div class="flex-1 flex flex-col gap-2">
+                <h5 class="text-secondary text-2xl">
+                  <span v-if="currentLanguage === 'en'">Meeting Frequency</span
+                  ><span v-else-if="currentLanguage === 'fr'"
+                    >Fréquence de réunions</span
+                  >
+                </h5>
+                <h6 class="text-accent text-2xl">
+                  <span v-if="currentLanguage === 'en'">Quarterly</span
+                  ><span v-else-if="currentLanguage === 'fr'"
+                    >Trimestrielle</span
+                  >
+                </h6>
+              </div>
+            </div>
+            <!-- FIN -->
             <div class="space-y-4 text-gray-700 mb-6">
               <p
                 v-if="currentLanguage === 'en'"
@@ -336,6 +424,48 @@
                 >Comité technique ALM groupe</span
               >
             </h3>
+            <!-- DEBUT -->
+            <div
+              class="flex justify-evenly items-center pt-3 pb-8 font-bold text-center"
+            >
+              <div class="flex-1 flex flex-col gap-2">
+                <h5 class="text-secondary text-2xl">
+                  <span v-if="currentLanguage === 'en'">Chair</span>
+                  <span v-else-if="currentLanguage === 'fr'">Présidence</span>
+                </h5>
+                <h6 class="text-accent text-2xl">
+                  <span v-if="currentLanguage === 'en'"
+                    >Director and General Manager</span
+                  >
+                  <span v-else-if="currentLanguage === 'fr'"
+                    >Directeur Général Exécutif en charge des Fonctions Groupe
+                    et Opérations</span
+                  >
+                </h6>
+              </div>
+              <div class="flex-1 flex flex-col gap-2">
+                <div class="text-7xl text-accent">9</div>
+                <h5 class="text-secondary text-2xl">
+                  <span v-if="currentLanguage === 'en'">Members</span
+                  ><span v-else-if="currentLanguage === 'fr'">Membres</span>
+                </h5>
+              </div>
+              <div class="flex-1 flex flex-col gap-2">
+                <h5 class="text-secondary text-2xl">
+                  <span v-if="currentLanguage === 'en'">Meeting Frequency</span
+                  ><span v-else-if="currentLanguage === 'fr'"
+                    >Fréquence de réunions</span
+                  >
+                </h5>
+                <h6 class="text-accent text-2xl">
+                  <span v-if="currentLanguage === 'en'">Quarterly</span
+                  ><span v-else-if="currentLanguage === 'fr'"
+                    >Trimestrielle</span
+                  >
+                </h6>
+              </div>
+            </div>
+            <!-- FIN -->
             <div class="space-y-4 text-gray-700 mb-6">
               <p
                 v-if="currentLanguage === 'en'"
@@ -399,6 +529,47 @@
                 >Comité de pilotage & de gestion des risques groupe</span
               >
             </h3>
+            <!-- DEBUT -->
+            <div
+              class="flex justify-evenly items-center pt-3 pb-8 font-bold text-center"
+            >
+              <div class="flex-1 flex flex-col gap-2">
+                <h5 class="text-secondary text-2xl">
+                  <span v-if="currentLanguage === 'en'">Chair</span>
+                  <span v-else-if="currentLanguage === 'fr'">Présidence</span>
+                </h5>
+                <h6 class="text-accent text-2xl">
+                  <span v-if="currentLanguage === 'en'"
+                    >Delegate General Manager Officer Responsible for Group
+                    Risks</span
+                  >
+                  <span v-else-if="currentLanguage === 'fr'"
+                    >Directeur Général Délégué en charge des Risques
+                    Groupe</span
+                  >
+                </h6>
+              </div>
+              <div class="flex-1 flex flex-col gap-2">
+                <div class="text-7xl text-accent">7</div>
+                <h5 class="text-secondary text-2xl">
+                  <span v-if="currentLanguage === 'en'">Members</span
+                  ><span v-else-if="currentLanguage === 'fr'">Membres</span>
+                </h5>
+              </div>
+              <div class="flex-1 flex flex-col gap-2">
+                <h5 class="text-secondary text-2xl">
+                  <span v-if="currentLanguage === 'en'">Meeting Frequency</span
+                  ><span v-else-if="currentLanguage === 'fr'"
+                    >Fréquence de réunions</span
+                  >
+                </h5>
+                <h6 class="text-accent text-2xl">
+                  <span v-if="currentLanguage === 'en'">Bi-monthly</span
+                  ><span v-else-if="currentLanguage === 'fr'">Bimensuelle</span>
+                </h6>
+              </div>
+            </div>
+            <!-- FIN -->
             <div class="space-y-4 text-gray-700 mb-6">
               <p
                 v-if="currentLanguage === 'en'"
@@ -467,6 +638,49 @@
                 >Comité de fonctionnement / comité PCA</span
               >
             </h3>
+            <!-- DEBUT -->
+            <div
+              class="flex justify-evenly items-center pt-3 pb-8 font-bold text-center"
+            >
+              <div class="flex-1 flex flex-col gap-2">
+                <h5 class="text-secondary text-2xl">
+                  <span v-if="currentLanguage === 'en'">Chair</span>
+                  <span v-else-if="currentLanguage === 'fr'">Présidence</span>
+                </h5>
+                <h6 class="text-accent text-2xl">
+                  <span v-if="currentLanguage === 'en'"
+                    >Head of Group Technologies, Processes & Organisation
+                    Division</span
+                  >
+                  <span v-else-if="currentLanguage === 'fr'"
+                    >Responsable du Pôle Technologies, Process & Organisation
+                    Groupe</span
+                  >
+                </h6>
+              </div>
+              <div class="flex-1 flex flex-col gap-2">
+                <div class="text-7xl text-accent">11</div>
+                <h5 class="text-secondary text-2xl">
+                  <span v-if="currentLanguage === 'en'">Members</span
+                  ><span v-else-if="currentLanguage === 'fr'">Membres</span>
+                </h5>
+              </div>
+              <div class="flex-1 flex flex-col gap-2">
+                <h5 class="text-secondary text-2xl">
+                  <span v-if="currentLanguage === 'en'">Meeting Frequency</span
+                  ><span v-else-if="currentLanguage === 'fr'"
+                    >Fréquence de réunions</span
+                  >
+                </h5>
+                <h6 class="text-accent text-2xl">
+                  <span v-if="currentLanguage === 'en'">Weekly</span
+                  ><span v-else-if="currentLanguage === 'fr'"
+                    >Hebdomadaire</span
+                  >
+                </h6>
+              </div>
+            </div>
+            <!-- FIN -->
             <div class="space-y-4 text-gray-700 mb-6">
               <p
                 v-if="currentLanguage === 'en'"
@@ -525,6 +739,47 @@
                 >Comité environnemental, social et soutenabilité</span
               >
             </h3>
+            <!-- DEBUT -->
+            <div
+              class="flex justify-evenly items-center pt-3 pb-8 font-bold text-center"
+            >
+              <div class="flex-1 flex flex-col gap-2">
+                <h5 class="text-secondary text-2xl">
+                  <span v-if="currentLanguage === 'en'">Chair</span>
+                  <span v-else-if="currentLanguage === 'fr'">Présidence</span>
+                </h5>
+                <h6 class="text-accent text-2xl">
+                  <span v-if="currentLanguage === 'en'"
+                    >Director and General Manager</span
+                  >
+                  <span v-else-if="currentLanguage === 'fr'"
+                    >L'Administrateur Directeur Général Délégué</span
+                  >
+                </h6>
+              </div>
+              <div class="flex-1 flex flex-col gap-2">
+                <div class="text-7xl text-accent">14</div>
+                <h5 class="text-secondary text-2xl">
+                  <span v-if="currentLanguage === 'en'">Members</span
+                  ><span v-else-if="currentLanguage === 'fr'">Membres</span>
+                </h5>
+              </div>
+              <div class="flex-1 flex flex-col gap-2">
+                <h5 class="text-secondary text-2xl">
+                  <span v-if="currentLanguage === 'en'">Meeting Frequency</span
+                  ><span v-else-if="currentLanguage === 'fr'"
+                    >Fréquence de réunions</span
+                  >
+                </h5>
+                <h6 class="text-accent text-2xl">
+                  <span v-if="currentLanguage === 'en'">Every 4 months</span
+                  ><span v-else-if="currentLanguage === 'fr'"
+                    >Tous les 4 mois</span
+                  >
+                </h6>
+              </div>
+            </div>
+            <!-- FIN -->
             <div class="space-y-4 text-gray-700 mb-6">
               <p
                 v-if="currentLanguage === 'en'"
@@ -578,6 +833,28 @@
                 >Strategy task force</span
               >
             </h3>
+            <!-- DEBUT -->
+            <div
+              class="flex justify-evenly items-center pt-3 pb-8 font-bold text-center"
+            >
+              <div class="flex-1 flex flex-col gap-2">
+                <div class="text-7xl text-accent">4</div>
+                <h5 class="text-secondary text-2xl">
+                  <span v-if="currentLanguage === 'en'">Members</span
+                  ><span v-else-if="currentLanguage === 'fr'">Membres</span>
+                </h5>
+              </div>
+              <div class="flex-1 flex flex-col gap-2">
+                <div class="text-7xl text-accent">25%</div>
+                <h5 class="text-secondary text-2xl">
+                  <span v-if="currentLanguage === 'en'">Independent shares</span
+                  ><span v-else-if="currentLanguage === 'fr'"
+                    >Parts indépendantes</span
+                  >
+                </h5>
+              </div>
+            </div>
+            <!-- FIN -->
             <div class="space-y-4 text-gray-700 mb-6">
               <p
                 v-if="currentLanguage === 'en'"
@@ -638,6 +915,28 @@
                 >Comité de gouvernance, nominations et rémunérations</span
               >
             </h3>
+            <!-- DEBUT -->
+            <div
+              class="flex justify-evenly items-center pt-3 pb-8 font-bold text-center"
+            >
+              <div class="flex-1 flex flex-col gap-2">
+                <div class="text-7xl text-accent">2</div>
+                <h5 class="text-secondary text-2xl">
+                  <span v-if="currentLanguage === 'en'">Members</span
+                  ><span v-else-if="currentLanguage === 'fr'">Membres</span>
+                </h5>
+              </div>
+              <div class="flex-1 flex flex-col gap-2">
+                <div class="text-7xl text-accent">-</div>
+                <h5 class="text-secondary text-2xl">
+                  <span v-if="currentLanguage === 'en'">Independent shares</span
+                  ><span v-else-if="currentLanguage === 'fr'"
+                    >Parts indépendantes</span
+                  >
+                </h5>
+              </div>
+            </div>
+            <!-- FIN -->
             <div class="space-y-4 text-gray-700 mb-6">
               <p
                 v-if="currentLanguage === 'en'"
@@ -698,6 +997,37 @@
                 >Comité des risques groupe</span
               >
             </h3>
+            <!-- DEBUT -->
+            <div
+              class="flex justify-evenly items-center pt-3 pb-8 font-bold text-center"
+            >
+              <div class="flex-1 flex flex-col gap-2">
+                <div class="text-7xl text-accent">5</div>
+                <h5 class="text-secondary text-2xl">
+                  <span v-if="currentLanguage === 'en'">Members</span
+                  ><span v-else-if="currentLanguage === 'fr'">Membres</span>
+                </h5>
+              </div>
+              <div class="flex-1 flex flex-col gap-2">
+                <div class="text-7xl text-accent">20%</div>
+                <h5 class="text-secondary text-2xl">
+                  <span v-if="currentLanguage === 'en'">Independent shares</span
+                  ><span v-else-if="currentLanguage === 'fr'"
+                    >Parts indépendantes</span
+                  >
+                </h5>
+              </div>
+              <div class="flex-1 flex flex-col gap-2">
+                <div class="text-7xl text-accent">4</div>
+                <h5 class="text-secondary text-2xl">
+                  <span v-if="currentLanguage === 'en'">Number of meetings</span
+                  ><span v-else-if="currentLanguage === 'fr'"
+                    >Nombre de réunions</span
+                  >
+                </h5>
+              </div>
+            </div>
+            <!-- FIN -->
             <div class="space-y-4 text-gray-700 mb-6">
               <p
                 v-if="currentLanguage === 'en'"
@@ -762,6 +1092,37 @@
                 >Comité d'audit et de contrôle interne groupe</span
               >
             </h3>
+            <!-- DEBUT -->
+            <div
+              class="flex justify-evenly items-center pt-3 pb-8 font-bold text-center"
+            >
+              <div class="flex-1 flex flex-col gap-2">
+                <div class="text-7xl text-accent">4</div>
+                <h5 class="text-secondary text-2xl">
+                  <span v-if="currentLanguage === 'en'">Members</span
+                  ><span v-else-if="currentLanguage === 'fr'">Membres</span>
+                </h5>
+              </div>
+              <div class="flex-1 flex flex-col gap-2">
+                <div class="text-7xl text-accent">50%</div>
+                <h5 class="text-secondary text-2xl">
+                  <span v-if="currentLanguage === 'en'">Independent shares</span
+                  ><span v-else-if="currentLanguage === 'fr'"
+                    >Parts indépendantes</span
+                  >
+                </h5>
+              </div>
+              <div class="flex-1 flex flex-col gap-2">
+                <div class="text-7xl text-accent">4</div>
+                <h5 class="text-secondary text-2xl">
+                  <span v-if="currentLanguage === 'en'">Number of meetings</span
+                  ><span v-else-if="currentLanguage === 'fr'"
+                    >Nombre de réunions</span
+                  >
+                </h5>
+              </div>
+            </div>
+            <!-- FIN -->
             <div class="space-y-4 text-gray-700 mb-6">
               <p
                 v-if="currentLanguage === 'en'"
