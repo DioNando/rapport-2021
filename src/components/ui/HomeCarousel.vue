@@ -158,7 +158,7 @@
             class="flex-2 grid grid-cols-2 gap-12 items-center justify-center"
           >
             <div class="flex items-start gap-4">
-              <img src="/assets/images/backgrounds/320.png" class="h-48" />
+              <img src="/assets/images/backgrounds/320.png" class="h-40" />
               <p>
                 <span v-if="currentLanguage === 'en'"
                   >Schools in Morocco and 6 schools in Senegal, Congo
@@ -171,7 +171,7 @@
               </p>
             </div>
             <div class="flex items-start gap-4">
-              <img src="/assets/images/backgrounds/32-000.png" class="h-48" />
+              <img src="/assets/images/backgrounds/32-000.png" class="h-40" />
               <p>
                 <span v-if="currentLanguage === 'en'"
                   >Pupils schooled within the Medersat.com network, 50% of whom
@@ -186,7 +186,7 @@
               </p>
             </div>
             <div class="flex items-start gap-4">
-              <img src="/assets/images/backgrounds/63.png" class="h-48" />
+              <img src="/assets/images/backgrounds/63.png" class="h-40" />
               <p>
                 <span v-if="currentLanguage === 'en'"
                   >Schools providing a pre-school and primary education to more
@@ -201,7 +201,7 @@
               </p>
             </div>
             <div class="flex items-start gap-4">
-              <img src="/assets/images/backgrounds/36.png" class="h-48" />
+              <img src="/assets/images/backgrounds/36.png" class="h-40" />
               <p>
                 <span v-if="currentLanguage === 'en'"
                   >Schools awarded the « Eco-School » label by the Mohammed VI
@@ -214,7 +214,7 @@
               </p>
             </div>
             <div class="flex items-start gap-4">
-              <img src="/assets/images/backgrounds/578.png" class="h-48" />
+              <img src="/assets/images/backgrounds/578.png" class="h-40" />
               <div class="space-y-4">
                 <p>
                   <span v-if="currentLanguage === 'en'"
@@ -258,7 +258,7 @@
 
       <!-- Element 4 -->
       <swiper-slide class="h-auto p-4 lg:px-32">
-        <div class="slide-card overflow-hidden h-full flex gap-8">
+        <div class="slide-card overflow-hidden h-full flex flex-col lg:flex-row gap-8">
           <div class="flex-1 p-8">
             <h3 class="text-2xl font-bold text-primary mb-3 uppercase">
               <span v-if="currentLanguage === 'en'"
@@ -300,15 +300,15 @@
             </p>
           </div>
           <div
-            class="flex-3 flex flex-wrap items-end justify-center text-gray-600 gap-8"
+            class="flex-3 flex flex-wrap items-start justify-center text-gray-600 gap-12 text-center"
           >
             <!-- governance -->
-            <div class="flex flex-col items-center">
+            <div class="flex flex-col items-center w-64">
               <img
                 src="/assets/images/backgrounds/Biographies-01.png"
-                class="h-40"
+                class="w-100"
               />
-              <h5>
+              <h5 class="font-bold text-primary">
                 <span v-if="currentLanguage === 'en'">Mr.</span
                 ><span v-else-if="currentLanguage === 'fr'">M.</span> OTHMAN
                 BENJELLOUN
@@ -322,12 +322,12 @@
                 >
               </p>
             </div>
-            <div class="flex flex-col items-center">
+            <div class="flex flex-col items-center w-40">
               <img
                 src="/assets/images/backgrounds/Biographies-02.png"
-                class="h-24"
+                class="w-100"
               />
-              <h5>
+              <h5 class="font-bold text-primary">
                 <span v-if="currentLanguage === 'en'">Mr.</span
                 ><span v-else-if="currentLanguage === 'fr'">M.</span> Zouheir
                 Bensaid
@@ -341,12 +341,12 @@
                 >
               </p>
             </div>
-            <div class="flex flex-col items-center">
+            <div class="flex flex-col items-center w-40">
               <img
                 src="/assets/images/backgrounds/Biographies-03.png"
-                class="h-24"
+                class="w-100"
               />
-              <h5>
+              <h5 class="font-bold text-primary">
                 <span v-if="currentLanguage === 'en'">Mr.</span
                 ><span v-else-if="currentLanguage === 'fr'">M.</span> Lucien
                 Miara
@@ -362,12 +362,12 @@
                 >
               </p>
             </div>
-            <div class="flex flex-col items-center">
+            <div class="flex flex-col items-center w-40">
               <img
                 src="/assets/images/backgrounds/Biographies-04.png"
-                class="h-24"
+                class="w-100"
               />
-              <h5>
+              <h5 class="font-bold text-primary">
                 <span v-if="currentLanguage === 'en'">Mr.</span
                 ><span v-else-if="currentLanguage === 'fr'">M.</span> Abdellatif
                 Zaghnoun
@@ -383,12 +383,12 @@
                 >
               </p>
             </div>
-            <div class="flex flex-col items-center">
+            <div class="flex flex-col items-center w-40">
               <img
                 src="/assets/images/backgrounds/Biographies-06.png"
-                class="h-24"
+                class="w-100"
               />
-              <h5>
+              <h5 class="font-bold text-primary">
                 <span v-if="currentLanguage === 'en'">Mr.</span
                 ><span v-else-if="currentLanguage === 'fr'">M.</span> Azeddine
                 Guessous
@@ -402,12 +402,12 @@
                 >
               </p>
             </div>
-            <div class="flex flex-col items-center">
+            <div class="flex flex-col items-center w-40">
               <img
                 src="/assets/images/backgrounds/Biographies-07.png"
-                class="h-24"
+                class="w-100"
               />
-              <h5>
+              <h5 class="font-bold text-primary">
                 <span v-if="currentLanguage === 'en'">Mr.</span
                 ><span v-else-if="currentLanguage === 'fr'">M.</span> Marc
                 Beaujean
@@ -423,12 +423,12 @@
                 >
               </p>
             </div>
-            <div class="flex flex-col items-center">
+            <div class="flex flex-col items-center w-40">
               <img
                 src="/assets/images/backgrounds/Biographies-08.png"
-                class="h-24"
+                class="w-100"
               />
-              <h5>
+              <h5 class="font-bold text-primary">
                 <span v-if="currentLanguage === 'en'">Mr.</span
                 ><span v-else-if="currentLanguage === 'fr'">M.</span> Mohamed
                 Kabbaj
@@ -442,12 +442,12 @@
                 >
               </p>
             </div>
-            <div class="flex flex-col items-center">
+            <div class="flex flex-col items-center w-40">
               <img
                 src="/assets/images/backgrounds/Biographies-09.png"
-                class="h-24"
+                class="w-100"
               />
-              <h5>
+              <h5 class="font-bold text-primary">
                 <span v-if="currentLanguage === 'en'">Mrs.</span
                 ><span v-else-if="currentLanguage === 'fr'">Mme.</span> Nezha
                 Lahrichi
@@ -461,12 +461,12 @@
                 >
               </p>
             </div>
-            <div class="flex flex-col items-center">
+            <div class="flex flex-col items-center w-40">
               <img
                 src="/assets/images/backgrounds/Biographies-10.png"
-                class="h-24"
+                class="w-100"
               />
-              <h5>
+              <h5 class="font-bold text-primary">
                 <span v-if="currentLanguage === 'en'">Mr.</span
                 ><span v-else-if="currentLanguage === 'fr'">M.</span> Abdou
                 Bensouda
@@ -480,12 +480,12 @@
                 >
               </p>
             </div>
-            <div class="flex flex-col items-center">
+            <div class="flex flex-col items-center w-40">
               <img
                 src="/assets/images/backgrounds/Biographies-11.png"
-                class="h-24"
+                class="w-100"
               />
-              <h5>
+              <h5 class="font-bold text-primary">
                 <span v-if="currentLanguage === 'en'">Mr.</span
                 ><span v-else-if="currentLanguage === 'fr'">M.</span> Brahim
                 Benjelloun-Touimi
@@ -499,12 +499,12 @@
                 >
               </p>
             </div>
-            <div class="flex flex-col items-center">
+            <div class="flex flex-col items-center w-40">
               <img
                 src="/assets/images/backgrounds/Biographies-05.png"
-                class="h-24"
+                class="w-100"
               />
-              <h5>
+              <h5 class="font-bold text-primary">
                 <span v-if="currentLanguage === 'en'">Mr.</span
                 ><span v-else-if="currentLanguage === 'fr'">M.</span> Hicham El
                 Amrani
@@ -518,12 +518,12 @@
                 >
               </p>
             </div>
-            <div class="flex flex-col items-center">
+            <div class="flex flex-col items-center w-40">
               <img
                 src="/assets/images/backgrounds/Biographies-13.png"
-                class="h-24"
+                class="w-100"
               />
-              <h5>
+              <h5 class="font-bold text-primary">
                 <span v-if="currentLanguage === 'en'">Mr.</span
                 ><span v-else-if="currentLanguage === 'fr'">M.</span> Brian C.
                 Mck Henderson
@@ -537,12 +537,12 @@
                 >
               </p>
             </div>
-            <div class="flex flex-col items-center">
+            <div class="flex flex-col items-center w-40">
               <img
                 src="/assets/images/backgrounds/Biographies-12.png"
-                class="h-24"
+                class="w-100"
               />
-              <h5>
+              <h5 class="font-bold text-primary">
                 <span v-if="currentLanguage === 'en'">Mrs.</span
                 ><span v-else-if="currentLanguage === 'fr'">Mme.</span> Myryem
                 Bouazzaoui
@@ -558,7 +558,7 @@
             </div>
             <button
               @click="openGovernancePDF()"
-              class="px-6 py-3 bg-primary text-white rounded-lg hover:bg-accent transition-colors duration-300 cursor-pointer"
+              class="self-center px-6 py-3 bg-primary text-white rounded-lg hover:bg-accent transition-colors duration-300 cursor-pointer"
             >
               <span v-if="currentLanguage === 'en'">Download</span>
               <span v-else-if="currentLanguage === 'fr'">Télécharger</span>
@@ -658,42 +658,42 @@
               principaux groupes bancaires et financiers en Afrique. ​
             </p>
             <div
-              class="flex items-center justify-between font-bold text-gray-600"
+              class="flex items-end justify-between font-bold text-gray-600"
             >
-              <div class="flex flex-col items-center mt-8">
+              <div class="flex flex-col items-center mt-4">
                 <img
                   :src="
                     currentLanguage === 'en'
                       ? '/assets/images/backgrounds/3rd.png'
                       : '/assets/images/backgrounds/3e.png'
                   "
-                  class="h-24 mb-2"
+                  class="w-20 mb-2"
                 />
                 <p v-if="currentLanguage === 'en'">Bank by total assets</p>
                 <p v-else-if="currentLanguage === 'fr'">
                   Banque par total des actifs
                 </p>
               </div>
-              <div class="flex flex-col items-center">
+              <div class="flex flex-col items-center mt-4">
                 <img
                   :src="
                     currentLanguage === 'en'
                       ? '/assets/images/backgrounds/2nd.png'
                       : '/assets/images/backgrounds/2e.png'
                   "
-                  class="h-24 mb-2"
+                  class="w-20 mb-2"
                 />
                 <p v-if="currentLanguage === 'en'">Bank-insurer</p>
                 <p v-else-if="currentLanguage === 'fr'">Bancassureur</p>
               </div>
-              <div class="flex flex-col items-center">
+              <div class="flex flex-col items-center mt-4">
                 <img
                   :src="
                     currentLanguage === 'en'
                       ? '/assets/images/backgrounds/3rd.png'
                       : '/assets/images/backgrounds/3e.png'
                   "
-                  class="h-24 mb-2"
+                  class="w-20 mb-2"
                 />
                 <p v-if="currentLanguage === 'en'">Asset manager</p>
                 <p v-else-if="currentLanguage === 'fr'">
