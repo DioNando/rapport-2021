@@ -27,7 +27,7 @@
     </nav> -->
     <!-- Version 2 -->
     <nav
-      class="flex flex-col flex-nowrap lg:flex-row items-center justify-between p-4 md:p-24"
+      class="flex flex-nowrap items-center justify-between gap-8 p-4 md:p-24"
     >
       <router-link to="/" class="logo">
         <img
@@ -139,6 +139,9 @@ header {
 .menu-content {
   position: fixed;
   width: 30%;
+  @media (max-width: 768px) {
+    width: 80%;
+  }
   height: 100%;
   right: 0;
   top: 0;

@@ -23,9 +23,9 @@
       }"
       class="content-swiper"
     >
-      <swiper-slide v-for="(slide, i) in governanceSlides" :key="i" class="h-auto px-64">
+      <swiper-slide v-for="(slide, i) in governanceSlides" :key="i" class="h-auto px-2 lg:px-64">
         <div class="slide-card text-gray-600">
-          <div class="flex gap-8">
+          <div class="flex flex-col lg:flex-row gap-8">
             <img
               :src="slide.img"
               :alt="slide.title"
