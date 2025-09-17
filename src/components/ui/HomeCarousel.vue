@@ -217,39 +217,39 @@
               <img src="/assets/images/backgrounds/578.png" class="h-48" />
               <div class="space-y-4">
                 <p>
-                <span v-if="currentLanguage === 'en'"
-                  >Schools providing a pre-school and primary education to more
-                  than 12,000 students from socially disadvantaged
-                  backgrounds</span
-                >
-                <span v-else-if="currentLanguage === 'fr'"
-                  >Écoles dispensant un enseignement préscolaire et primaire à
-                  plus de 12 000 élèves issus de milieux socialement
-                  défavorisés</span
-                >
-              </p>
-              <p>
-                <span v-if="currentLanguage === 'en'"
-                  >Community-based development benefiting more than 2,000
-                  persons, 53% of whom are women, with 12,000 attending literacy
-                  programmes</span
-                >
-                <span v-else-if="currentLanguage === 'fr'"
-                  >Développement communautaire bénéficiant à plus de 2 000
-                  personnes dont 53% de femmes et 12 000 bénéficiaires de
-                  programmes d'alphabétisation</span
-                >
-              </p>
-              <p>
-                <span v-if="currentLanguage === 'en'"
-                  >BANK OF AFRICA allocates 4% of its gross operating income to
-                  BMCE Bank Foundation</span
-                >
-                <span v-else-if="currentLanguage === 'fr'"
-                  >BANK OF AFRICA alloue 4% de son Résultat Brut d'Exploitation
-                  à la Fondation BMCE Bank</span
-                >
-              </p>
+                  <span v-if="currentLanguage === 'en'"
+                    >Schools providing a pre-school and primary education to
+                    more than 12,000 students from socially disadvantaged
+                    backgrounds</span
+                  >
+                  <span v-else-if="currentLanguage === 'fr'"
+                    >Écoles dispensant un enseignement préscolaire et primaire à
+                    plus de 12 000 élèves issus de milieux socialement
+                    défavorisés</span
+                  >
+                </p>
+                <p>
+                  <span v-if="currentLanguage === 'en'"
+                    >Community-based development benefiting more than 2,000
+                    persons, 53% of whom are women, with 12,000 attending
+                    literacy programmes</span
+                  >
+                  <span v-else-if="currentLanguage === 'fr'"
+                    >Développement communautaire bénéficiant à plus de 2 000
+                    personnes dont 53% de femmes et 12 000 bénéficiaires de
+                    programmes d'alphabétisation</span
+                  >
+                </p>
+                <p>
+                  <span v-if="currentLanguage === 'en'"
+                    >BANK OF AFRICA allocates 4% of its gross operating income
+                    to BMCE Bank Foundation</span
+                  >
+                  <span v-else-if="currentLanguage === 'fr'"
+                    >BANK OF AFRICA alloue 4% de son Résultat Brut
+                    d'Exploitation à la Fondation BMCE Bank</span
+                  >
+                </p>
               </div>
             </div>
           </div>
@@ -299,8 +299,270 @@
               décision des instances centrales.
             </p>
           </div>
-          <div class="flex-2 flex items-center justify-center">
+          <div
+            class="flex-3 flex flex-wrap items-end justify-center text-gray-600 gap-8"
+          >
             <!-- governance -->
+            <div class="flex flex-col items-center">
+              <img
+                src="/assets/images/backgrounds/Biographies-01.png"
+                class="h-40"
+              />
+              <h5>
+                <span v-if="currentLanguage === 'en'">Mr.</span
+                ><span v-else-if="currentLanguage === 'fr'">M.</span> OTHMAN
+                BENJELLOUN
+              </h5>
+              <p>
+                <span v-if="currentLanguage === 'en'"
+                  >CHAIRMAN & CHIEF EXECUTIVE OFFICER</span
+                >
+                <span v-else-if="currentLanguage === 'fr'"
+                  >PRÉSIDENT DIRECTEUR GÉNÉRAL DE BANK OF AFRICA</span
+                >
+              </p>
+            </div>
+            <div class="flex flex-col items-center">
+              <img
+                src="/assets/images/backgrounds/Biographies-02.png"
+                class="h-24"
+              />
+              <h5>
+                <span v-if="currentLanguage === 'en'">Mr.</span
+                ><span v-else-if="currentLanguage === 'fr'">M.</span> Zouheir
+                Bensaid
+              </h5>
+              <p>
+                <span v-if="currentLanguage === 'en'"
+                  >RMA's Representative</span
+                >
+                <span v-else-if="currentLanguage === 'fr'"
+                  >Représentant de RMA</span
+                >
+              </p>
+            </div>
+            <div class="flex flex-col items-center">
+              <img
+                src="/assets/images/backgrounds/Biographies-03.png"
+                class="h-24"
+              />
+              <h5>
+                <span v-if="currentLanguage === 'en'">Mr.</span
+                ><span v-else-if="currentLanguage === 'fr'">M.</span> Lucien
+                Miara
+              </h5>
+              <p>
+                <span v-if="currentLanguage === 'en'"
+                  >Permanent Representative of the Federal Bank of Mutual
+                  Credit</span
+                >
+                <span v-else-if="currentLanguage === 'fr'"
+                  >Représentant Permanent de la Banque Fédérale du Crédit
+                  Mutuel</span
+                >
+              </p>
+            </div>
+            <div class="flex flex-col items-center">
+              <img
+                src="/assets/images/backgrounds/Biographies-04.png"
+                class="h-24"
+              />
+              <h5>
+                <span v-if="currentLanguage === 'en'">Mr.</span
+                ><span v-else-if="currentLanguage === 'fr'">M.</span> Abdellatif
+                Zaghnoun
+              </h5>
+              <p>
+                <span v-if="currentLanguage === 'en'"
+                  >Permanent Representative of the Deposit and Management
+                  Fund</span
+                >
+                <span v-else-if="currentLanguage === 'fr'"
+                  >Représentant Permanent de la Caisse de Dépot et de
+                  Gestion</span
+                >
+              </p>
+            </div>
+            <div class="flex flex-col items-center">
+              <img
+                src="/assets/images/backgrounds/Biographies-06.png"
+                class="h-24"
+              />
+              <h5>
+                <span v-if="currentLanguage === 'en'">Mr.</span
+                ><span v-else-if="currentLanguage === 'fr'">M.</span> Azeddine
+                Guessous
+              </h5>
+              <p>
+                <span v-if="currentLanguage === 'en'"
+                  >Intuitu Personae Director</span
+                >
+                <span v-else-if="currentLanguage === 'fr'"
+                  >Administrateur Intuitu Personae</span
+                >
+              </p>
+            </div>
+            <div class="flex flex-col items-center">
+              <img
+                src="/assets/images/backgrounds/Biographies-07.png"
+                class="h-24"
+              />
+              <h5>
+                <span v-if="currentLanguage === 'en'">Mr.</span
+                ><span v-else-if="currentLanguage === 'fr'">M.</span> Marc
+                Beaujean
+              </h5>
+              <p>
+                <span v-if="currentLanguage === 'en'"
+                  >British International Investment (CDC Ltd) Permanent
+                  Representative</span
+                >
+                <span v-else-if="currentLanguage === 'fr'"
+                  >Représentant Permanent de British International Investment
+                  (CDC Ltd)</span
+                >
+              </p>
+            </div>
+            <div class="flex flex-col items-center">
+              <img
+                src="/assets/images/backgrounds/Biographies-08.png"
+                class="h-24"
+              />
+              <h5>
+                <span v-if="currentLanguage === 'en'">Mr.</span
+                ><span v-else-if="currentLanguage === 'fr'">M.</span> Mohamed
+                Kabbaj
+              </h5>
+              <p>
+                <span v-if="currentLanguage === 'en'"
+                  >Independent Director</span
+                >
+                <span v-else-if="currentLanguage === 'fr'"
+                  >Administrateur Indépendant</span
+                >
+              </p>
+            </div>
+            <div class="flex flex-col items-center">
+              <img
+                src="/assets/images/backgrounds/Biographies-09.png"
+                class="h-24"
+              />
+              <h5>
+                <span v-if="currentLanguage === 'en'">Mrs.</span
+                ><span v-else-if="currentLanguage === 'fr'">Mme.</span> Nezha
+                Lahrichi
+              </h5>
+              <p>
+                <span v-if="currentLanguage === 'en'"
+                  >Independent Director</span
+                >
+                <span v-else-if="currentLanguage === 'fr'"
+                  >Administratrice Indépendante</span
+                >
+              </p>
+            </div>
+            <div class="flex flex-col items-center">
+              <img
+                src="/assets/images/backgrounds/Biographies-10.png"
+                class="h-24"
+              />
+              <h5>
+                <span v-if="currentLanguage === 'en'">Mr.</span
+                ><span v-else-if="currentLanguage === 'fr'">M.</span> Abdou
+                Bensouda
+              </h5>
+              <p>
+                <span v-if="currentLanguage === 'en'"
+                  >Intuitu Personae Director</span
+                >
+                <span v-else-if="currentLanguage === 'fr'"
+                  >Administrateur Intuitu Personae</span
+                >
+              </p>
+            </div>
+            <div class="flex flex-col items-center">
+              <img
+                src="/assets/images/backgrounds/Biographies-11.png"
+                class="h-24"
+              />
+              <h5>
+                <span v-if="currentLanguage === 'en'">Mr.</span
+                ><span v-else-if="currentLanguage === 'fr'">M.</span> Brahim
+                Benjelloun-Touimi
+              </h5>
+              <p>
+                <span v-if="currentLanguage === 'en'"
+                  >Director and General Manager</span
+                >
+                <span v-else-if="currentLanguage === 'fr'"
+                  >Administrateur Directeur Général Délégué</span
+                >
+              </p>
+            </div>
+            <div class="flex flex-col items-center">
+              <img
+                src="/assets/images/backgrounds/Biographies-05.png"
+                class="h-24"
+              />
+              <h5>
+                <span v-if="currentLanguage === 'en'">Mr.</span
+                ><span v-else-if="currentLanguage === 'fr'">M.</span> Hicham El
+                Amrani
+              </h5>
+              <p>
+                <span v-if="currentLanguage === 'en'"
+                  >O Capital Group's Permanent Representative</span
+                >
+                <span v-else-if="currentLanguage === 'fr'"
+                  >Représentant Permanent de O Capital Group</span
+                >
+              </p>
+            </div>
+            <div class="flex flex-col items-center">
+              <img
+                src="/assets/images/backgrounds/Biographies-13.png"
+                class="h-24"
+              />
+              <h5>
+                <span v-if="currentLanguage === 'en'">Mr.</span
+                ><span v-else-if="currentLanguage === 'fr'">M.</span> Brian C.
+                Mck Henderson
+              </h5>
+              <p>
+                <span v-if="currentLanguage === 'en'"
+                  >Advisor to the Chairman</span
+                >
+                <span v-else-if="currentLanguage === 'fr'"
+                  >Conseiller auprès de la Présidence</span
+                >
+              </p>
+            </div>
+            <div class="flex flex-col items-center">
+              <img
+                src="/assets/images/backgrounds/Biographies-12.png"
+                class="h-24"
+              />
+              <h5>
+                <span v-if="currentLanguage === 'en'">Mrs.</span
+                ><span v-else-if="currentLanguage === 'fr'">Mme.</span> Myryem
+                Bouazzaoui
+              </h5>
+              <p>
+                <span v-if="currentLanguage === 'en'"
+                  >Intuitu Personae Director</span
+                >
+                <span v-else-if="currentLanguage === 'fr'"
+                  >Administratrice Intuitu Personae</span
+                >
+              </p>
+            </div>
+            <button
+              @click="openGovernancePDF()"
+              class="px-6 py-3 bg-primary text-white rounded-lg hover:bg-accent transition-colors duration-300 cursor-pointer"
+            >
+              <span v-if="currentLanguage === 'en'">Download</span>
+              <span v-else-if="currentLanguage === 'fr'">Télécharger</span>
+            </button>
           </div>
         </div>
       </swiper-slide>
@@ -459,6 +721,14 @@ import "swiper/css/effect-fade";
 
 const { currentLanguage } = useLanguage();
 const modules = [Navigation, Pagination, Autoplay, EffectFade];
+
+const openGovernancePDF = () => {
+  const pdfUrl =
+    currentLanguage.value === "en"
+      ? "/assets/pdfs/gouvernance_UK.pdf"
+      : "/assets/pdfs/GOUVERNANCE-2.pdf";
+  window.open(pdfUrl, "_blank");
+};
 </script>
 
 <style lang="scss" scoped>
