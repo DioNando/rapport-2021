@@ -25,9 +25,13 @@
     <div
       class="flex flex-col md:flex-row items-center bg-gray-200 p-12 rounded-xl gap-6 mt-12 hover:shadow-xl transition-all"
     >
-      <h3 class="flex-1 text-4xl text-primary font-bold uppercase mb-6">
-        A model for creating and sharing value | Un modèle de création et de
-        partage de valeur
+      <h3 class="flex-1 text-4xl text-primary font-bold mb-6">
+        <span v-if="currentLanguage === 'en'">
+          # A model for creating and sharing value</span
+        >
+        <span v-else-if="currentLanguage === 'fr'">
+          # Un modèle de création et de partage de valeur</span
+        >
       </h3>
       <div class="flex-2 space-y-6 text-lg">
         <p v-if="currentLanguage === 'en'">
@@ -114,13 +118,14 @@
       <!-- 10 elements -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 p-12">
         <div
-          v-for="item in kpisElements"
+          v-for="(item, index) in kpisElements"
           :key="item.id"
+          :ref="el => setKpiRef(el, index)"
           class="flex flex-col items-center text-center space-y-4"
         >
           <img :src="item.src" :alt="item.title" class="object-contain" />
-          <h4 class="text-5xl font-bold text-secondary">{{ item.title }}</h4>
-          <p class="text-2xl font-bold text-secondary">
+          <h4 class="text-5xl font-extrabold text-secondary">{{ counterValues[index] || '0' }}</h4>
+          <p class="text-xl font-bold text-secondary">
             {{ currentLanguage === "en" ? item.subtitleEn : item.subtitleFr }}
           </p>
         </div>
@@ -138,7 +143,7 @@
       <div
         v-for="card in cardsData"
         :key="card.id"
-        class="bg-primary rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl hover:scale-105 transition-all duration-300"
+        class="bg-primary shadow-lg overflow-hidden hover:shadow-2xl hover:scale-105 transition-all duration-300 relative"
       >
         <img
           :src="card.src"
@@ -147,11 +152,11 @@
         />
         <div class="p-6 flex flex-col">
           <h3 class="text-xl font-bold text-white mb-4">
-            {{ currentLanguage === "en" ? card.titleEn : card.titleFr }}
+            # {{ currentLanguage === "en" ? card.titleEn : card.titleFr }}
           </h3>
           <router-link
             :to="card.url"
-            class="self-end inline-block py-2 px-4 text-sm rounded-lg text-white bg-accent hover:bg-secondary cursor-pointer transition-all"
+            class="self-end inline-block py-2 px-4 text-sm text-white bg-accent hover:bg-secondary cursor-pointer transition-all absolute bottom-0 right-0"
           >
             {{ t("common.read_more") }}
           </router-link>
@@ -176,7 +181,9 @@
 <script setup>
 import { useI18n } from "vue-i18n";
 import { useLanguage } from "@/composables/useLanguage";
-import { ref } from "vue";
+import { useCounterAnimation, easingFunctions } from "@/composables/useCounterAnimation";
+import { useViewportCounters } from "@/composables/useViewportCounters";
+import { ref, onMounted, computed } from "vue";
 
 const { currentLanguage } = useLanguage();
 
@@ -185,6 +192,24 @@ import LogoCarousel from "@/components/ui/LogoCarousel.vue";
 import HomeCarousel from "../components/ui/HomeCarousel.vue";
 
 const { t } = useI18n();
+
+// Refs pour les éléments KPI
+const kpiRefs = ref([]);
+const counterAnimations = ref([]);
+const counterValues = ref([]);
+
+// Composable pour la détection de visibilité
+const { observeMultipleElements } = useViewportCounters({
+  threshold: 0.4,
+  rootMargin: '0px 0px -100px 0px'
+});
+
+// Fonction pour définir les refs des éléments KPI
+function setKpiRef(el, index) {
+  if (el) {
+    kpiRefs.value[index] = el;
+  }
+}
 
 const kpisElements = ref([
   {
@@ -258,6 +283,45 @@ const kpisElements = ref([
     subtitleFr: "Jours / hommes de formation Vs. 2 392 en 2020",
   },
 ]);
+
+// Initialiser les animations de compteurs
+function initCounterAnimations() {
+  counterAnimations.value = kpisElements.value.map((item, index) => {
+    const animation = useCounterAnimation(
+      item.title, 
+      2000 + (index * 200), // Durée variable pour un effet échelonné
+      easingFunctions.easeOutCubic
+    );
+    
+    // Stocker la valeur affichée
+    counterValues.value[index] = animation.displayValue;
+    
+    return animation;
+  });
+}
+
+// Fonction pour démarrer toutes les animations
+function startAllAnimations() {
+  if (kpiRefs.value.length === 0 || counterAnimations.value.length === 0) return;
+
+  const elementsData = kpiRefs.value.map((element, index) => ({
+    element,
+    counterAnimation: counterAnimations.value[index],
+    delay: 0 // Pas de délai - toutes les animations se déclenchent simultanément
+  })).filter(data => data.element); // Filtrer les éléments null/undefined
+
+  observeMultipleElements(elementsData, 100);
+}
+
+// Initialiser au montage
+onMounted(() => {
+  initCounterAnimations();
+  
+  // Attendre le prochain tick pour que les refs soient disponibles
+  setTimeout(() => {
+    startAllAnimations();
+  }, 100);
+});
 
 const cardsData = ref([
   {

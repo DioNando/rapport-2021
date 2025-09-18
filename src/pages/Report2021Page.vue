@@ -1,8 +1,8 @@
 <template>
-  <section class="px-4 md:px-24">
+  <section class="px-4 md:px-24 text-gray-600">
     <div class="mb-12">
-      <h1 class="text-4xl text-primary font-bold uppercase mb-6">
-        {{ t('reports_2021.main_title') }}
+      <h1 class="text-4xl text-primary font-bold mb-6">
+        # {{ t('reports_2021.main_title') }}
       </h1>
       <div>
         <ul>
@@ -52,8 +52,8 @@
       </div>
     </div>
     <div class="mb-12">
-      <h1 class="text-4xl text-primary font-bold uppercase mb-6">
-        {{ t('reports_2021.sustainable_title') }}
+      <h1 class="text-4xl text-primary font-bold mb-6">
+        # {{ t('reports_2021.sustainable_title') }}
       </h1>
       <div>
         <ul>
@@ -103,8 +103,8 @@
       </div>
     </div>
     <div>
-      <h1 class="text-4xl text-primary font-bold uppercase mb-6">
-        {{ t('reports_2021.abridged_title') }}
+      <h1 class="text-4xl text-primary font-bold mb-6">
+        # {{ t('reports_2021.abridged_title') }}
       </h1>
       <div>
         <ul>

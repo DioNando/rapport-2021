@@ -1,7 +1,7 @@
 <template>
   <section class="p-24">
-    <h1 class="text-4xl text-primary font-bold uppercase mb-12">
-      {{ t("navigation.value_model") }}
+    <h1 class="text-4xl text-primary font-bold mb-12">
+      # {{ t("navigation.value_model") }}
     </h1>
     <article class="text-xl">
       <div v-if="currentLanguage === 'en'">

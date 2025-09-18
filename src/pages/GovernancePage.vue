@@ -4,8 +4,8 @@
       src="/assets/images/backgrounds/bg_header_gouvernance.webp"
       class="rounded-xl"
     />
-    <h1 class="text-4xl text-primary font-bold uppercase my-12">
-      {{ t("navigation.governance") }}
+    <h1 class="text-4xl text-primary font-bold my-12">
+      # {{ t("navigation.governance") }}
     </h1>
     <div class="text-lg mb-10">
       <p v-if="currentLanguage === 'en'">

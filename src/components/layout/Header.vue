@@ -139,9 +139,6 @@ header {
 .menu-content {
   position: fixed;
   width: 30%;
-  @media (max-width: 768px) {
-    width: 80%;
-  }
   height: 100%;
   right: 0;
   top: 0;
@@ -152,5 +149,9 @@ header {
   align-items: center;
   justify-content: center;
   padding: 2rem;
+
+  @media (max-width: 768px) {
+    width: 80%;
+  }
 }
 </style>

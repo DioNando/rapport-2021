@@ -16,8 +16,8 @@
       </p>
     </div>
     <article class="text-xl">
-      <h1 class="text-4xl text-primary font-bold uppercase mb-12">
-        {{ t("navigation.chairman_message") }}
+      <h1 class="text-4xl text-primary font-bold mb-12">
+        # {{ t("navigation.chairman_message") }}
       </h1>
       <!-- VERSION ANGLAIS -->
       <div v-if="currentLanguage === 'en'" class="space-y-6">

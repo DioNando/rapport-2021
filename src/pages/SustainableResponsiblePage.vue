@@ -4,8 +4,8 @@
       src="/assets/images/backgrounds/bg_header_page.webp"
       class="rounded-xl"
     />
-    <h1 class="text-4xl text-primary font-bold uppercase my-12">
-      {{ t("navigation.sustainable_responsible") }}
+    <h1 class="text-4xl text-primary font-bold my-12">
+      # {{ t("navigation.sustainable_responsible") }}
     </h1>
     <div class="flex items-center justify-center relative image-container">
       <img

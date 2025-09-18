@@ -20,7 +20,7 @@
       <swiper-slide class="h-auto px-2 lg:px-64">
         <div class="slide-card overflow-hidden h-full">
           <div class="p-8">
-            <h3 class="text-2xl font-bold text-primary mb-3 uppercase">
+            <h3 class="text-2xl font-bold text-primary mb-3 uppercase"># 
               <span v-if="currentLanguage === 'en'">CHAIRMAN'S COMMITTEE</span>
               <span v-else-if="currentLanguage === 'fr'"
                 >Comité présidentiel</span
@@ -104,13 +104,13 @@
             <h5
               class="text-white text-2xl font-semibold uppercase bg-accent inline-block px-4 py-2 mb-4"
             >
-              <span v-if="currentLanguage === 'en'">Governing bodies</span>
+              # <span v-if="currentLanguage === 'en'">Governing bodies</span>
               <span v-else-if="currentLanguage === 'fr'"
                 >Organes de dirigeance</span
               >
             </h5>
             <h3 class="text-2xl font-bold text-primary mb-3 uppercase">
-              <span v-if="currentLanguage === 'en'"
+              # <span v-if="currentLanguage === 'en'"
                 >GROUP EXECUTIVE COMMITTEE</span
               >
               <span v-else-if="currentLanguage === 'fr'"
@@ -210,13 +210,13 @@
             <h5
               class="text-white text-2xl font-semibold uppercase bg-accent inline-block px-4 py-2 mb-4"
             >
-              <span v-if="currentLanguage === 'en'">Governing bodies</span>
+              # <span v-if="currentLanguage === 'en'">Governing bodies</span>
               <span v-else-if="currentLanguage === 'fr'"
                 >Organes de dirigeance</span
               >
             </h5>
             <h3 class="text-2xl font-bold text-primary mb-3 uppercase">
-              <span v-if="currentLanguage === 'en'"
+              # <span v-if="currentLanguage === 'en'"
                 >EXECUTIVE COMMITTEE MOROCCO AND INTERNATIONAL</span
               >
               <span v-else-if="currentLanguage === 'fr'"
@@ -317,13 +317,13 @@
             <h5
               class="text-white text-2xl font-semibold uppercase bg-accent inline-block px-4 py-2 mb-4"
             >
-              <span v-if="currentLanguage === 'en'">Governing bodies</span>
+              # <span v-if="currentLanguage === 'en'">Governing bodies</span>
               <span v-else-if="currentLanguage === 'fr'"
                 >Organes de dirigeance</span
               >
             </h5>
             <h3 class="text-2xl font-bold text-primary mb-3 uppercase">
-              <span v-if="currentLanguage === 'en'"
+              # <span v-if="currentLanguage === 'en'"
                 >GROUP INTERNAL CONTROL COORDINATION COMMITTEE</span
               >
               <span v-else-if="currentLanguage === 'fr'"
@@ -411,13 +411,13 @@
             <h5
               class="text-white text-2xl font-semibold uppercase bg-accent inline-block px-4 py-2 mb-4"
             >
-              <span v-if="currentLanguage === 'en'">Governing bodies</span>
+              # <span v-if="currentLanguage === 'en'">Governing bodies</span>
               <span v-else-if="currentLanguage === 'fr'"
                 >Organes de dirigeance</span
               >
             </h5>
             <h3 class="text-2xl font-bold text-primary mb-3 uppercase">
-              <span v-if="currentLanguage === 'en'"
+              # <span v-if="currentLanguage === 'en'"
                 >GROUP ALM TECHNICAL COMMITTEE</span
               >
               <span v-else-if="currentLanguage === 'fr'"
@@ -516,13 +516,13 @@
             <h5
               class="text-white text-2xl font-semibold uppercase bg-accent inline-block px-4 py-2 mb-4"
             >
-              <span v-if="currentLanguage === 'en'">Governing bodies</span>
+              # <span v-if="currentLanguage === 'en'">Governing bodies</span>
               <span v-else-if="currentLanguage === 'fr'"
                 >Organes de dirigeance</span
               >
             </h5>
             <h3 class="text-2xl font-bold text-primary mb-3 uppercase">
-              <span v-if="currentLanguage === 'en'"
+              # <span v-if="currentLanguage === 'en'"
                 >GROUP RISK STEERING AND MANAGEMENT COMMITTEE</span
               >
               <span v-else-if="currentLanguage === 'fr'"
@@ -625,13 +625,13 @@
             <h5
               class="text-white text-2xl font-semibold uppercase bg-accent inline-block px-4 py-2 mb-4"
             >
-              <span v-if="currentLanguage === 'en'">Governing bodies</span>
+              # <span v-if="currentLanguage === 'en'">Governing bodies</span>
               <span v-else-if="currentLanguage === 'fr'"
                 >Organes de dirigeance</span
               >
             </h5>
             <h3 class="text-2xl font-bold text-primary mb-3 uppercase">
-              <span v-if="currentLanguage === 'en'"
+              # <span v-if="currentLanguage === 'en'"
                 >OPERATING COMMITTEE / BCP COMMITTEE</span
               >
               <span v-else-if="currentLanguage === 'fr'"
@@ -726,13 +726,13 @@
             <h5
               class="text-white text-2xl font-semibold uppercase bg-accent inline-block px-4 py-2 mb-4"
             >
-              <span v-if="currentLanguage === 'en'">Governing bodies</span>
+              # <span v-if="currentLanguage === 'en'">Governing bodies</span>
               <span v-else-if="currentLanguage === 'fr'"
                 >Organes de dirigeance</span
               >
             </h5>
             <h3 class="text-2xl font-bold text-primary mb-3 uppercase">
-              <span v-if="currentLanguage === 'en'"
+              # <span v-if="currentLanguage === 'en'"
                 >ENVIRONMENTAL AND SOCIAL SUSTAINABILITY COMMITTEE</span
               >
               <span v-else-if="currentLanguage === 'fr'"
@@ -822,13 +822,13 @@
             <h5
               class="text-white text-2xl font-semibold uppercase bg-accent inline-block px-4 py-2 mb-4"
             >
-              <span v-if="currentLanguage === 'en'">Specialized COMMITTEE</span>
+              # <span v-if="currentLanguage === 'en'">Specialized COMMITTEE</span>
               <span v-else-if="currentLanguage === 'fr'"
                 >Comité spécialisé</span
               >
             </h5>
             <h3 class="text-2xl font-bold text-primary mb-3 uppercase">
-              <span v-if="currentLanguage === 'en'">STRATEGY TASK FORCE</span>
+              # <span v-if="currentLanguage === 'en'">STRATEGY TASK FORCE</span>
               <span v-else-if="currentLanguage === 'fr'"
                 >Strategy task force</span
               >
@@ -902,13 +902,13 @@
             <h5
               class="text-white text-2xl font-semibold uppercase bg-accent inline-block px-4 py-2 mb-4"
             >
-              <span v-if="currentLanguage === 'en'">Specialized COMMITTEE</span>
+              # <span v-if="currentLanguage === 'en'">Specialized COMMITTEE</span>
               <span v-else-if="currentLanguage === 'fr'"
                 >Comité spécialisé</span
               >
             </h5>
             <h3 class="text-2xl font-bold text-primary mb-3 uppercase">
-              <span v-if="currentLanguage === 'en'"
+              # <span v-if="currentLanguage === 'en'"
                 >GOVERNANCE, APPOINTMENTS AND REMUNERATION COMMITTEE</span
               >
               <span v-else-if="currentLanguage === 'fr'"
@@ -986,13 +986,13 @@
             <h5
               class="text-white text-2xl font-semibold uppercase bg-accent inline-block px-4 py-2 mb-4"
             >
-              <span v-if="currentLanguage === 'en'">Specialized COMMITTEE</span>
+              # <span v-if="currentLanguage === 'en'">Specialized COMMITTEE</span>
               <span v-else-if="currentLanguage === 'fr'"
                 >Comité spécialisé</span
               >
             </h5>
             <h3 class="text-2xl font-bold text-primary mb-3 uppercase">
-              <span v-if="currentLanguage === 'en'">GROUP RISKS COMMITTEE</span>
+              #<span v-if="currentLanguage === 'en'">GROUP RISKS COMMITTEE</span>
               <span v-else-if="currentLanguage === 'fr'"
                 >Comité des risques groupe</span
               >
@@ -1079,13 +1079,13 @@
             <h5
               class="text-white text-2xl font-semibold uppercase bg-accent inline-block px-4 py-2 mb-4"
             >
-              <span v-if="currentLanguage === 'en'">Specialized COMMITTEE</span>
+              # <span v-if="currentLanguage === 'en'">Specialized COMMITTEE</span>
               <span v-else-if="currentLanguage === 'fr'"
                 >COMITÉ spécialisé</span
               >
             </h5>
             <h3 class="text-2xl font-bold text-primary mb-3 uppercase">
-              <span v-if="currentLanguage === 'en'"
+              # <span v-if="currentLanguage === 'en'"
                 >GROUP AUDIT AND INTERNAL CONTROL COMMITTEE</span
               >
               <span v-else-if="currentLanguage === 'fr'"
